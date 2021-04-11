@@ -13,7 +13,9 @@ import CategoryMealsScreen from "../screens/CategoryMealsScreen";
 import MealDetailScreen from "../screens/MealDetailScreen";
 import FavoritesScreen from "../screens/FavoritesScreen";
 import FiltersScreen from "../screens/FiltersScreen";
+import MusicScreen from "../screens/MusicScreen";
 import Colors from "../constants/Colors";
+import ShareScreen from "../screens/ShareScreen";
 
 const defaultStackNavOptions = {
   headerStyle: {
@@ -26,7 +28,7 @@ const defaultStackNavOptions = {
     fontFamily: "open-sans",
   },
   headerTintColor: Platform.OS === "android" ? "white" : Colors.primaryColor,
-  headerTitle: "A Screen",
+  // headerTitle: "A Screen",
 };
 
 const MealsNavigator = createStackNavigator(
@@ -56,21 +58,41 @@ const FavNavigator = createStackNavigator(
   }
 );
 
+const MusicNavigator = createStackNavigator(
+  {
+    Music: MusicScreen,
+    // MealDetail: MealDetailScreen,
+  },
+  {
+    // initialRouteName: 'Categories',
+    defaultNavigationOptions: defaultStackNavOptions,
+  }
+);
+
+const ShareNavigator = createStackNavigator(
+  {
+    Music: ShareScreen,
+    // MealDetail: MealDetailScreen,
+  },
+  {
+    // initialRouteName: 'Categories',
+    defaultNavigationOptions: defaultStackNavOptions,
+  }
+);
+
 const tabScreenConfig = {
   Meals: {
     screen: MealsNavigator,
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
-        return (
-          <Ionicons name="ios-restaurant" size={25} color={tabInfo.tintColor} />
-        );
+        return <Ionicons name="home" size={25} color={tabInfo.tintColor} />;
       },
       tabBarColor: Colors.primaryColor,
       tabBarLabel:
         Platform.OS === "android" ? (
-          <Text style={{ fontFamily: "open-sans-bold" }}>Meals</Text>
+          <Text style={{ fontFamily: "open-sans-bold" }}>Home</Text>
         ) : (
-          "Meals"
+          "Home"
         ),
     },
   },
@@ -86,6 +108,45 @@ const tabScreenConfig = {
           <Text style={{ fontFamily: "open-sans-bold" }}>Favorites</Text>
         ) : (
           "Favorites"
+        ),
+    },
+  },
+  Music: {
+    screen: MusicNavigator,
+    navigationOptions: {
+      tabBarIcon: (tabInfo) => {
+        return (
+          <Ionicons
+            name="ios-musical-notes"
+            size={25}
+            color={tabInfo.tintColor}
+          />
+        );
+      },
+      tabBarColor: Colors.accentColor,
+      tabBarLabel:
+        Platform.OS === "android" ? (
+          <Text style={{ fontFamily: "open-sans-bold" }}>Music</Text>
+        ) : (
+          "Music"
+        ),
+    },
+  },
+
+  Share: {
+    screen: ShareNavigator,
+    navigationOptions: {
+      tabBarIcon: (tabInfo) => {
+        return (
+          <Ionicons name="ios-share" size={25} color={tabInfo.tintColor} />
+        );
+      },
+      tabBarColor: Colors.accentColor,
+      tabBarLabel:
+        Platform.OS === "android" ? (
+          <Text style={{ fontFamily: "open-sans-bold" }}>Share</Text>
+        ) : (
+          "Share"
         ),
     },
   },
@@ -130,7 +191,7 @@ const MainNavigator = createDrawerNavigator(
       },
     },
     // Filters: FiltersNavigator,
-    Filters1:FiltersNavigator
+    Filters1: FiltersNavigator,
   },
   {
     contentOptions: {

@@ -2,16 +2,22 @@ import Category from '../models/category';
 import Meal from '../models/meal';
 
 export const CATEGORIES = [
-  new Category('c1', 'Italian', '#f5428d'),
-  new Category('c2', 'Quick & Easy', '#f54242'),
-  new Category('c3', 'Hamburgers', '#f5a442'),
-  new Category('c4', 'German', '#f5d142'),
-  new Category('c5', 'Light & Lovely', '#368dff'),
-  new Category('c6', 'Exotic', '#41d95d'),
-  new Category('c7', 'Breakfast', '#9eecff'),
-  new Category('c8', 'Asian Indian Breakfast', '#b9ffb0'),
-  new Category('c9', 'French', '#ffc7ff'),
-  new Category('c10', 'Summer', '#47fced')
+  new Category('c1', 'Temples', '#f5428d'),
+  new Category('c2', 'Divine Chant', '#f54242'),
+  new Category('c3', 'Divine Songs', '#f5a442'),
+  new Category('c4', 'Mudra', '#f5d142'),
+  new Category('c5', 'Thithilakam', '#368dff'),
+  new Category('c6', 'Subha Muhurth', '#41d95d'),
+  new Category('c7', 'Divine Sounds', '#9eecff'),
+  new Category('c8', 'Vastu', '#b9ffb0'),
+  new Category('c9', 'Wall Papers', '#ffc7ff'),
+  new Category('c10', 'Divine Mantra', '#47fced'),
+  new Category('c11', 'Pooja Stores', '#47fced'),
+  new Category('c12', 'Reminders', '#47fced'),
+  new Category('c13', 'Yantra', '#47fced'),
+  new Category('c14', 'TD Stores', '#47fced')
+
+
 ];
 
 export const MEALS = [
