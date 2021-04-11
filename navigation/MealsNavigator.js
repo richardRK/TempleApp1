@@ -85,7 +85,7 @@ const tabScreenConfig = {
     screen: MealsNavigator,
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
-        return <Ionicons name="home" size={25} color={tabInfo.tintColor} />;
+        return <Ionicons name="home" size={20} color={tabInfo.tintColor} />;
       },
       tabBarColor: Colors.primaryColor,
       tabBarLabel:
@@ -100,7 +100,7 @@ const tabScreenConfig = {
     screen: FavNavigator,
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
-        return <Ionicons name="ios-star" size={25} color={tabInfo.tintColor} />;
+        return <Ionicons name="ios-star" size={20} color={tabInfo.tintColor} />;
       },
       tabBarColor: Colors.accentColor,
       tabBarLabel:
@@ -118,7 +118,7 @@ const tabScreenConfig = {
         return (
           <Ionicons
             name="ios-musical-notes"
-            size={25}
+            size={20}
             color={tabInfo.tintColor}
           />
         );
@@ -138,7 +138,7 @@ const tabScreenConfig = {
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
         return (
-          <Ionicons name="ios-share" size={25} color={tabInfo.tintColor} />
+          <Ionicons name="ios-share" size={20} color={tabInfo.tintColor} />
         );
       },
       tabBarColor: Colors.accentColor,

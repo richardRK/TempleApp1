@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import {
   TouchableOpacity,
   StyleSheet,
@@ -9,16 +9,37 @@ import {
 
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
 
-
 import { CATEGORIES } from "../data/dummy-data";
 import CategoryGridTile from "../components/CategoryGridTile";
 import HeaderButton from "../components/HeaderButton";
 import Colors from "../constants/Colors";
+import { SearchBar } from "react-native-elements";
 
 import { Ionicons } from "@expo/vector-icons";
 
+// const filteredCategories = (cats) => {
+//   arrayholder = cats;
+//   return arrayholder;
+// };
+
+const transformedCartItems = [];
+
+const setFilterRes = (text) => {
+  const newData = CATEGORIES.filter((item) => {
+    const itemData = `${item.title.toUpperCase()}`;
+    // const textData = text.toUpperCase();
+    return itemData.indexOf(text) > -1;
+  });
+
+  return newData;
+};
+
 const CategoriesScreen = (props) => {
+  // const [filterRes, setFilterRes] = useState([]);
+
   const renderGridItem = (itemData) => {
+    // arrayholder = itemData;
+
     return (
       <CategoryGridTile
         title={itemData.item.title}
@@ -38,7 +59,7 @@ const CategoriesScreen = (props) => {
   return (
     <FlatList
       keyExtractor={(item, index) => item.id}
-      data={CATEGORIES}
+      data={setFilterRes("")}
       renderItem={renderGridItem}
       numColumns={2}
     />
@@ -46,6 +67,8 @@ const CategoriesScreen = (props) => {
 };
 
 CategoriesScreen.navigationOptions = (navData) => {
+  // arrayholder = [];
+
   return {
     headerTitle: "",
     //   headerTitle: (
@@ -66,17 +89,27 @@ CategoriesScreen.navigationOptions = (navData) => {
     },
     headerLeft: (
       <View style={styles.screen}>
-        <HeaderButtons
-          style={styles.hamburger}
-          HeaderButtonComponent={HeaderButton}
-        >
+        <HeaderButtons HeaderButtonComponent={HeaderButton}>
           <Item
+            style={styles.hamburger}
             title="Menu"
             iconName="ios-menu"
             onPress={() => {
               navData.navigation.toggleDrawer();
             }}
           />
+
+            <SearchBar
+              style= {styles.searchbar} 
+              containerStyle={styles.searchcontainer}
+              // inputStyle={{backgroundColor: 'white'}}
+              placeholderTextColor={"#g5g5g5"}
+              placeholder="Type Here..."
+              // lightTheme
+              // round
+              onChangeText={(text) => {}}
+              // autoCorrect={false}
+            />
         </HeaderButtons>
       </View>
     ),
@@ -87,17 +120,24 @@ CategoriesScreen.navigationOptions = (navData) => {
           style={styles.icons}
           // onPress={() => navigation.navigate({ routeName: "Notification" })}
         >
-    
+          <Ionicons
+            style={styles.icon1}
+            name="language-outline"
+            size={20}
+            color="white"
+          />
+
+          <Ionicons
+            style={styles.icon1}
+            name="location-outline"
+            size={20}
+            color="white"
+          />
+
           <Ionicons
             style={styles.icon1}
             name="ios-notifications"
-            size={25}
-            color="white"
-          />
-          <Ionicons
-            style={styles.icon2}
-            name="globe-outline"
-            size={25}
+            size={20}
             color="white"
           />
         </TouchableOpacity>
@@ -110,10 +150,44 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    paddingTop: 5,
+    // marginTop: 20,
+  },
+  searchcontainer: {
+    backgroundColor: Colors.primaryColor,
+    borderWidth: 0, //no effect
+    shadowColor: Colors.primaryColor, //no effect
+    borderBottomColor: "transparent",
+    borderTopColor: "transparent",
+  },
+  searchbar: {
+    width: "70%",
+    // backgroundColor: "", //no effect
+    borderWidth:0, //no effect
+    shadowColor: Colors.primaryColor, //no effect
+},
+  icon3: {
+    // justifyContent: "flex-start",
+    flexDirection: "row",
+    // paddingHorizontal: 28,
+    // paddingBottom: theme.SIZES.BASE,
+    // paddingTop: 20,
+    // justifyContent: 'center',
+    padding: 5,
+    // marginTop: 5,
+  },
+
+  search: {
+    // justifyContent: "flex-start",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    // paddingTop: 5,
   },
 
   hamburger: {
+    // justifyContent: "flex-start",
     flexDirection: "row",
+    // paddingTop: 5,
   },
   icons: {
     flexDirection: "row",
@@ -122,23 +196,22 @@ const styles = StyleSheet.create({
   img: {
     flexDirection: "row",
     padding: 20,
-    // width: 200,
-    // height: 60,
-    // resizeMode: "contain",
-    // marginHorizontal: 10,
-    // marginVertical: 10,
   },
   icon1: {
+    // justifyContent: "flex-end",
     flexDirection: "row",
+    // flexWrap: "wrap",
+    // paddingTop: 5,
     padding: 20,
-    // marginHorizontal: 10,
-    // marginVertical: 10,
+    // marginTop: 20,
   },
   icon2: {
+    // justifyContent: "flex-end",
     flexDirection: "row",
+    // flexWrap: "wrap",
+    // paddingTop: 5,
     padding: 20,
-    // marginHorizontal: 10,
-    // marginVertical: 10,
+    // marginTop: 20,
   },
 });
 
