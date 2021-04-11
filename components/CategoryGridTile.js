@@ -20,12 +20,14 @@ const CategoryGridTile = (props) => {
         <View
           style={{ ...styles.container, ...{ backgroundColor: props.color } }}
         >
-          <Text style={styles.title} numberOfLines={2}>
+          <Text style={styles.title} numberOfLines={4}>
             {props.title}
           </Text>
         </View>
       </TouchableCmp>
     </View>
+
+    
   );
 };
 
@@ -33,7 +35,7 @@ const styles = StyleSheet.create({
   gridItem: {
     flex: 1,
     margin: 10,
-    height: 150,
+    height: 80,
     borderRadius: 10,
     overflow:
       Platform.OS === "android" && Platform.Version >= 21

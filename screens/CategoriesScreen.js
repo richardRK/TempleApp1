@@ -17,10 +17,9 @@ import { SearchBar } from "react-native-elements";
 
 import { Ionicons } from "@expo/vector-icons";
 
-const transformedCartItems = [];
 
 const CategoriesScreen = (props) => {
-  const [filterCat, setfilterCat] = useState(CATEGORIES);
+  const [categories, setFilterCategory] = useState(CATEGORIES);
 
   const filterCategory = (text) => {
     const newData = CATEGORIES.filter((item) => {
@@ -29,7 +28,7 @@ const CategoriesScreen = (props) => {
       return itemData.indexOf(textData) > -1;
     });
 
-    setfilterCat(newData);
+    setFilterCategory(newData);
   };
 
   const renderGridItem = (itemData) => {
@@ -61,13 +60,13 @@ const CategoriesScreen = (props) => {
         onChangeText={(text) => {
           filterCategory(text);
         }}
-        value={filterCat}
+        value={categories}
         autoCorrect={false}
       />
 
       <FlatList
         keyExtractor={(item, index) => item.id}
-        data={filterCat}
+        data={categories}
         renderItem={renderGridItem}
         numColumns={2}
       />
