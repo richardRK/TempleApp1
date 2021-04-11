@@ -17,29 +17,22 @@ import { SearchBar } from "react-native-elements";
 
 import { Ionicons } from "@expo/vector-icons";
 
-// const filteredCategories = (cats) => {
-//   arrayholder = cats;
-//   return arrayholder;
-// };
-
 const transformedCartItems = [];
 
-const setFilterRes = (text) => {
-  const newData = CATEGORIES.filter((item) => {
-    const itemData = `${item.title.toUpperCase()}`;
-    // const textData = text.toUpperCase();
-    return itemData.indexOf(text) > -1;
-  });
-
-  return newData;
-};
-
 const CategoriesScreen = (props) => {
-  // const [filterRes, setFilterRes] = useState([]);
+  const [filterCat, setfilterCat] = useState(CATEGORIES);
+
+  const filterCategory = (text) => {
+    const newData = CATEGORIES.filter((item) => {
+      const itemData = `${item.title.toUpperCase()}`;
+      const textData = text.toUpperCase();
+      return itemData.indexOf(textData) > -1;
+    });
+
+    setfilterCat(newData);
+  };
 
   const renderGridItem = (itemData) => {
-    // arrayholder = itemData;
-
     return (
       <CategoryGridTile
         title={itemData.item.title}
@@ -57,12 +50,28 @@ const CategoriesScreen = (props) => {
   };
 
   return (
-    <FlatList
-      keyExtractor={(item, index) => item.id}
-      data={setFilterRes("")}
-      renderItem={renderGridItem}
-      numColumns={2}
-    />
+    <View>
+      <SearchBar
+        style={styles.searchbar}
+        containerStyle={styles.searchcontainer}
+        // placeholderTextColor={"#g5g5g5"}
+        placeholder="Type Here..."
+        // lightTheme
+        // round
+        onChangeText={(text) => {
+          filterCategory(text);
+        }}
+        value={filterCat}
+        autoCorrect={false}
+      />
+
+      <FlatList
+        keyExtractor={(item, index) => item.id}
+        data={filterCat}
+        renderItem={renderGridItem}
+        numColumns={2}
+      />
+    </View>
   );
 };
 
@@ -98,18 +107,6 @@ CategoriesScreen.navigationOptions = (navData) => {
               navData.navigation.toggleDrawer();
             }}
           />
-
-            <SearchBar
-              style= {styles.searchbar} 
-              containerStyle={styles.searchcontainer}
-              // inputStyle={{backgroundColor: 'white'}}
-              placeholderTextColor={"#g5g5g5"}
-              placeholder="Type Here..."
-              // lightTheme
-              // round
-              onChangeText={(text) => {}}
-              // autoCorrect={false}
-            />
         </HeaderButtons>
       </View>
     ),
@@ -163,9 +160,9 @@ const styles = StyleSheet.create({
   searchbar: {
     width: "70%",
     // backgroundColor: "", //no effect
-    borderWidth:0, //no effect
+    borderWidth: 0, //no effect
     shadowColor: Colors.primaryColor, //no effect
-},
+  },
   icon3: {
     // justifyContent: "flex-start",
     flexDirection: "row",
