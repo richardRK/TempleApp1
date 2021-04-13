@@ -1,6 +1,8 @@
 import Category from "../models/category";
 import Meal from "../models/meal";
 
+import Images from '../constants/Images';
+
 
 export const CATEGORIES = [
   new Category(
@@ -8,6 +10,7 @@ export const CATEGORIES = [
     "Temples",
     "#f5428d",
     "https://cdn.pixabay.com/photo/2016/10/02/22/17/red-t-shirt-1710578_1280.jpg"
+    // Images.Temple1
   ),
   new Category(
     "c2",

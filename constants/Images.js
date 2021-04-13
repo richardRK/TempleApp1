@@ -1,5 +1,5 @@
 // local imgs
-const Temple1 = require("./assets/imgs/tmp1.jpg");
+const Temple1 = require("../assets/imgs/tmp1.jpg");
 
 // const Logo = require('../assets/imgs/now-logo.png');
 // const ProfileBackground = require('../assets/imgs/bg5.png');
@@ -13,7 +13,7 @@ const Temple1 = require("./assets/imgs/tmp1.jpg");
 // const InvisionLogo = require('../assets/imgs/invision-white-slim.png');
 
 const Viewed = [
-  require("./assets/imgs/tmp1.jpg"),
+  require("../assets/imgs/tmp1.jpg"),
   // require('../assets/imgs/project7.jpg'),
   // require('../assets/imgs/project6.jpg'),
   // require('../assets/imgs/project4.jpg'),
@@ -23,7 +23,7 @@ const Viewed = [
 
 const Products = {
   text: 'View article',
-  path: require("./assets/imgs/tmp1.jpg")
+  path: require("../assets/imgs/tmp1.jpg")
 };
 
 export default {
