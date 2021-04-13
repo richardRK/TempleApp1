@@ -36,6 +36,12 @@ const defaultStackNavOptions = {
 
 const MealsNavigator = createStackNavigator(
   {
+    Register: {
+      screen: Register,
+      navigationOptions: {
+        drawerLabel: () => null,
+      },
+    },
     Categories: {
       screen: CategoriesScreen,
     },
@@ -43,7 +49,6 @@ const MealsNavigator = createStackNavigator(
       screen: CategoryMealsScreen,
     },
     MealDetail: MealDetailScreen,
-    Register: Register,
   },
   {
     // initialRouteName: 'Categories',
@@ -190,6 +195,13 @@ const MainNavigator = createDrawerNavigator(
   {
     Splash: {
       screen: OnBoardingScreen,
+      navigationOptions: {
+        drawerLabel: () => null,
+      },
+    },
+
+    Register: {
+      screen: Register,
       navigationOptions: {
         drawerLabel: () => null,
       },
