@@ -16,6 +16,9 @@ import FiltersScreen from "../screens/FiltersScreen";
 import MusicScreen from "../screens/MusicScreen";
 import Colors from "../constants/Colors";
 import ShareScreen from "../screens/ShareScreen";
+import Register from "../screens/Register";
+
+import OnBoardingScreen from "../screens/Onboarding";
 
 const defaultStackNavOptions = {
   headerStyle: {
@@ -40,6 +43,7 @@ const MealsNavigator = createStackNavigator(
       screen: CategoryMealsScreen,
     },
     MealDetail: MealDetailScreen,
+    Register: Register,
   },
   {
     // initialRouteName: 'Categories',
@@ -184,6 +188,13 @@ const FiltersNavigator = createStackNavigator(
 
 const MainNavigator = createDrawerNavigator(
   {
+    Splash: {
+      screen: OnBoardingScreen,
+      navigationOptions: {
+        drawerLabel: () => null,
+      },
+    },
+
     MealsFavs: {
       screen: MealsFavTabNavigator,
       navigationOptions: {
@@ -191,7 +202,7 @@ const MainNavigator = createDrawerNavigator(
       },
     },
     // Filters: FiltersNavigator,
-    Filters1: FiltersNavigator,
+    Filters: FiltersNavigator,
   },
   {
     contentOptions: {
