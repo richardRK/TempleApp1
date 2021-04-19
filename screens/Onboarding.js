@@ -22,14 +22,14 @@ export default class Onboarding extends React.Component {
         <StatusBar barStyle="light-content" />
         <Block flex>
           <ImageBackground
-            source={Images.Onboarding}
+            source={Images.SR1}
             style={{ flex: 1, height: height, width, zIndex: 1 }}
           />
           <Block space="between" style={styles.padded}>
             <Block>
-              <Block middle>
+              {/* <Block middle>
                 <Image
-                  source={Images.NowLogo}
+                  source={Images.Logo}
                   style={{
                     width: 115,
                     height: 124,
@@ -37,7 +37,7 @@ export default class Onboarding extends React.Component {
                     position: "absolute",
                   }}
                 />
-              </Block>
+              </Block> */}
               <Block>
                 <Block middle>
                   <Text

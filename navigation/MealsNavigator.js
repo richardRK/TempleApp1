@@ -18,7 +18,10 @@ import Colors from "../constants/Colors";
 import ShareScreen from "../screens/ShareScreen";
 import Register from "../screens/Register";
 
+import TemplesScreen from "../screens/TemplesScreen";
+
 import OnBoardingScreen from "../screens/Onboarding";
+import BlogScreen from "../screens/BlogScreen";
 
 const defaultStackNavOptions = {
   headerStyle: {
@@ -36,12 +39,6 @@ const defaultStackNavOptions = {
 
 const MealsNavigator = createStackNavigator(
   {
-    Register: {
-      screen: Register,
-      navigationOptions: {
-        drawerLabel: () => null,
-      },
-    },
     Categories: {
       screen: CategoriesScreen,
     },
@@ -59,7 +56,16 @@ const MealsNavigator = createStackNavigator(
 const FavNavigator = createStackNavigator(
   {
     Favorites: FavoritesScreen,
-    MealDetail: MealDetailScreen,
+  },
+  {
+    // initialRouteName: 'Categories',
+    defaultNavigationOptions: defaultStackNavOptions,
+  }
+);
+
+const TemplesNavigator = createStackNavigator(
+  {
+    Temples: TemplesScreen,
   },
   {
     // initialRouteName: 'Categories',
@@ -89,6 +95,17 @@ const ShareNavigator = createStackNavigator(
   }
 );
 
+const BlogNavigator = createStackNavigator(
+  {
+    Music: BlogScreen,
+    // MealDetail: MealDetailScreen,
+  },
+  {
+    // initialRouteName: 'Categories',
+    defaultNavigationOptions: defaultStackNavOptions,
+  }
+);
+
 const tabScreenConfig = {
   Meals: {
     screen: MealsNavigator,
@@ -105,21 +122,29 @@ const tabScreenConfig = {
         ),
     },
   },
-  Favorites: {
-    screen: FavNavigator,
+
+  Pandits: {
+    screen: TemplesNavigator,
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
-        return <Ionicons name="ios-star" size={20} color={tabInfo.tintColor} />;
+        return (
+          <Ionicons
+            name="person-circle-outline"
+            size={20}
+            color={tabInfo.tintColor}
+          />
+        );
       },
       tabBarColor: Colors.accentColor,
       tabBarLabel:
         Platform.OS === "android" ? (
-          <Text style={{ fontFamily: "open-sans-bold" }}>Favorites</Text>
+          <Text style={{ fontFamily: "open-sans-bold" }}>Pandits</Text>
         ) : (
-          "Favorites"
+          "Pandits"
         ),
     },
   },
+
   Music: {
     screen: MusicNavigator,
     navigationOptions: {
@@ -142,6 +167,28 @@ const tabScreenConfig = {
     },
   },
 
+  Blog: {
+    screen: BlogNavigator,
+    navigationOptions: {
+      tabBarIcon: (tabInfo) => {
+        return (
+          <Ionicons
+            name="document-text-outline"
+            size={20}
+            color={tabInfo.tintColor}
+          />
+        );
+      },
+      tabBarColor: Colors.accentColor,
+      tabBarLabel:
+        Platform.OS === "android" ? (
+          <Text style={{ fontFamily: "open-sans-bold" }}>Blog</Text>
+        ) : (
+          "Blog"
+        ),
+    },
+  },
+
   Share: {
     screen: ShareNavigator,
     navigationOptions: {
@@ -156,6 +203,22 @@ const tabScreenConfig = {
           <Text style={{ fontFamily: "open-sans-bold" }}>Share</Text>
         ) : (
           "Share"
+        ),
+    },
+  },
+
+  Favorites: {
+    screen: FavNavigator,
+    navigationOptions: {
+      tabBarIcon: (tabInfo) => {
+        return <Ionicons name="ios-star" size={20} color={tabInfo.tintColor} />;
+      },
+      tabBarColor: Colors.accentColor,
+      tabBarLabel:
+        Platform.OS === "android" ? (
+          <Text style={{ fontFamily: "open-sans-bold" }}>Favorites</Text>
+        ) : (
+          "Favorites"
         ),
     },
   },
