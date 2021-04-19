@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   product: {
     flex: 1,
     height: 200,
-    margin: 20,
+    margin: 10,
     // paddingVertical: 20,
     // paddingBottom: 50,
   },

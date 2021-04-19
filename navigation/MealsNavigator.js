@@ -15,13 +15,11 @@ import FavoritesScreen from "../screens/FavoritesScreen";
 import FiltersScreen from "../screens/FiltersScreen";
 import MusicScreen from "../screens/MusicScreen";
 import Colors from "../constants/Colors";
-import ShareScreen from "../screens/ShareScreen";
 import Register from "../screens/Register";
-
 import TemplesScreen from "../screens/TemplesScreen";
-
 import OnBoardingScreen from "../screens/Onboarding";
 import BlogScreen from "../screens/BlogScreen";
+import PanditsScreen from "../screens/PanditsScreen";
 
 const defaultStackNavOptions = {
   headerStyle: {
@@ -73,6 +71,16 @@ const TemplesNavigator = createStackNavigator(
   }
 );
 
+const PanditsNavigator = createStackNavigator(
+  {
+    Pandits: PanditsScreen,
+  },
+  {
+    // initialRouteName: 'Categories',
+    defaultNavigationOptions: defaultStackNavOptions,
+  }
+);
+
 const MusicNavigator = createStackNavigator(
   {
     Music: MusicScreen,
@@ -84,20 +92,9 @@ const MusicNavigator = createStackNavigator(
   }
 );
 
-const ShareNavigator = createStackNavigator(
-  {
-    Music: ShareScreen,
-    // MealDetail: MealDetailScreen,
-  },
-  {
-    // initialRouteName: 'Categories',
-    defaultNavigationOptions: defaultStackNavOptions,
-  }
-);
-
 const BlogNavigator = createStackNavigator(
   {
-    Music: BlogScreen,
+    Blog: BlogScreen,
     // MealDetail: MealDetailScreen,
   },
   {
@@ -123,8 +120,26 @@ const tabScreenConfig = {
     },
   },
 
-  Pandits: {
+  Temples: {
     screen: TemplesNavigator,
+    navigationOptions: {
+      tabBarIcon: (tabInfo) => {
+        return (
+          <Ionicons name="trail-sign" size={20} color={tabInfo.tintColor} />
+        );
+      },
+      tabBarColor: Colors.accentColor,
+      tabBarLabel:
+        Platform.OS === "android" ? (
+          <Text style={{ fontFamily: "open-sans-bold" }}>Temples</Text>
+        ) : (
+          "Temples"
+        ),
+    },
+  },
+
+  Pandits: {
+    screen: PanditsNavigator,
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
         return (
@@ -185,24 +200,6 @@ const tabScreenConfig = {
           <Text style={{ fontFamily: "open-sans-bold" }}>Blog</Text>
         ) : (
           "Blog"
-        ),
-    },
-  },
-
-  Share: {
-    screen: ShareNavigator,
-    navigationOptions: {
-      tabBarIcon: (tabInfo) => {
-        return (
-          <Ionicons name="ios-share" size={20} color={tabInfo.tintColor} />
-        );
-      },
-      tabBarColor: Colors.accentColor,
-      tabBarLabel:
-        Platform.OS === "android" ? (
-          <Text style={{ fontFamily: "open-sans-bold" }}>Share</Text>
-        ) : (
-          "Share"
         ),
     },
   },
