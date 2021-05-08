@@ -23,9 +23,11 @@ import { Card } from "../components";
 
 import PropTypes from "prop-types";
 
-const FavoritesScreen = (props) => {
-  const scrollX = new Animated.Value(0);
-  // const cards = [articles];
+const CategoriesScreen1 = (props) => {
+
+    const scrollX = new Animated.Value(0);
+    const cards = [articles];
+
 
   return (
     <Block flex center>
@@ -34,7 +36,7 @@ const FavoritesScreen = (props) => {
         contentContainerStyle={{ paddingBottom: 30, width }}
       >
         <Block flex style={styles.group}>
-          {/* <Articles /> */}
+          <Articles />
           <Block flex card center shadow style={styles.category}>
             <ImageBackground
               source={Images.Products["path"]}
@@ -64,7 +66,7 @@ const FavoritesScreen = (props) => {
               width: width * 2,
             }}
           >
-            {/* {cards.map((item, index) => {
+            {cards.map((item, index) => {
               return (
                 <Card
                   key={index}
@@ -78,7 +80,7 @@ const FavoritesScreen = (props) => {
                   }}
                 />
               );
-            })} */}
+            })}
           </ScrollView>
         </Block>
       </ScrollView>
@@ -86,7 +88,7 @@ const FavoritesScreen = (props) => {
   );
 };
 
-FavoritesScreen.propTypes = {};
+CategoriesScreen1.propTypes = {};
 
 const styles = StyleSheet.create({
   title: {
@@ -154,4 +156,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default FavoritesScreen;
+export default CategoriesScreen1;

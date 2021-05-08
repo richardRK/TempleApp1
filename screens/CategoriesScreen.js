@@ -17,7 +17,6 @@ import { SearchBar } from "react-native-elements";
 
 import { Ionicons } from "@expo/vector-icons";
 
-
 const CategoriesScreen = (props) => {
   const [categories, setFilterCategory] = useState(CATEGORIES);
 
@@ -80,18 +79,6 @@ CategoriesScreen.navigationOptions = (navData) => {
 
   return {
     headerTitle: "",
-    //   headerTitle: (
-    //     <Image source={require("https://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls.jpg")}/>
-    // ),
-    // headerBackground: (
-    // <Image
-    //   style={StyleSheet.absoluteFill}
-    //   source={{
-    //     uri:
-    //       "https://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls.jpg",
-    //   }}
-    // />
-    // ),
     headerStyle: {
       height: 100,
       backgroundColor: Platform.OS === "android" ? Colors.primaryColor : "",

@@ -21,6 +21,8 @@ import OnBoardingScreen from "../screens/Onboarding";
 import BlogScreen from "../screens/BlogScreen";
 import PanditsScreen from "../screens/PanditsScreen";
 
+import CategoriesScreen1 from "../screens/CategoriesScreen1";
+
 const defaultStackNavOptions = {
   headerStyle: {
     backgroundColor: Platform.OS === "android" ? Colors.primaryColor : "",

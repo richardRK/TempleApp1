@@ -11,7 +11,7 @@ const ProfilePicture = require('../assets/imgs/profile-img.jpg');
 const CreativeTimLogo = require('../assets/imgs/creative-tim-white-slim2.png');
 const InvisionLogo = require('../assets/imgs/invision-white-slim.png');
 const T1 = require('../assets/imgs/t1.jpg');
-const SR1 = require('../assets/imgs/SR1.png');
+const SR1 = require('../assets/imgs/bg.png');
 
 const Viewed = [
   require('../assets/imgs/project5.jpg'),
