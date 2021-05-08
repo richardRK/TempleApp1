@@ -1,95 +1,92 @@
 import Category from "../models/category";
 import Meal from "../models/meal";
 
-import Images from '../constants/Images';
-
-
-
+import Images from "../constants/Images";
 
 export const CATEGORIES = [
   new Category(
     "c1",
     "Temples",
     "#f5428d",
-    "https://cdn.pixabay.com/photo/2016/10/02/22/17/red-t-shirt-1710578_1280.jpg"
+    require("../assets/imgs/project13.jpg")
   ),
   new Category(
     "c2",
     "Divine Chant",
     "#f54242",
-    "https://cdn.pixabay.com/photo/2015/10/03/02/14/pen-969298_1280.jpg"
+    require("../assets/imgs/project13.jpg")
   ),
   new Category(
     "c3",
     "Divine Songs",
     "#f5a442",
-    "https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg?cs=srgb&dl=blur-blurred-book-pages-46274.jpg&fm=jpg"
+    require("../assets/imgs/project13.jpg")
   ),
   new Category(
     "c4",
     "Mudra",
     "#f5d142",
-    "https://images.pexels.com/photos/6292/blue-pattern-texture-macro.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    require("../assets/imgs/project13.jpg")
   ),
   new Category(
     "c5",
     "Thithilakam",
     "#368dff",
-    "https://images.pexels.com/photos/6292/blue-pattern-texture-macro.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    require("../assets/imgs/project13.jpg")
   ),
   new Category(
     "c6",
     "Subha Muhurth",
     "#41d95d",
-    "https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg?cs=srgb&dl=blur-blurred-book-pages-46274.jpg&fm=jpg"
+    require("../assets/imgs/project13.jpg")
   ),
   new Category(
     "c7",
     "Divine Sounds",
     "#9eecff",
-    "https://images.pexels.com/photos/6292/blue-pattern-texture-macro.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    require("../assets/imgs/project13.jpg")
   ),
   new Category(
     "c8",
     "Vastu",
     "#b9ffb0",
-    "https://images.pexels.com/photos/6292/blue-pattern-texture-macro.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    require("../assets/imgs/project13.jpg")
   ),
   new Category(
     "c9",
     "Wall Papers",
     "#ffc7ff",
-    "https://images.pexels.com/photos/6292/blue-pattern-texture-macro.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    require("../assets/imgs/project13.jpg")
   ),
   new Category(
     "c10",
     "Divine Mantra",
     "#47fced",
-    "https://images.pexels.com/photos/6292/blue-pattern-texture-macro.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    require("../assets/imgs/project13.jpg")
   ),
   new Category(
     "c11",
     "Pooja Stores",
     "#47fced",
-    "https://images.pexels.com/photos/6292/blue-pattern-texture-macro.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    require("../assets/imgs/project13.jpg")
   ),
   new Category(
     "c12",
     "Reminders",
     "#47fced",
-    "https://images.pexels.com/photos/6292/blue-pattern-texture-macro.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    require("../assets/imgs/project13.jpg")
   ),
   new Category(
     "c13",
     "Yantra",
     "#47fced",
-    "https://images.pexels.com/photos/6292/blue-pattern-texture-macro.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    require("../assets/imgs/project13.jpg")
   ),
   new Category(
     "c14",
     "TD Stores",
     "#47fced",
-    "https://images.pexels.com/photos/6292/blue-pattern-texture-macro.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    require("../assets/imgs/project13.jpg")
   ),
 ];
 

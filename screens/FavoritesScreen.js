@@ -7,6 +7,7 @@ import {
   Image,
   Animated,
   ImageBackground,
+  FlatList,
 } from "react-native";
 
 import { Images, nowTheme, articles, tabs } from "../constants";
@@ -19,13 +20,13 @@ const { width } = Dimensions.get("screen");
 
 const thumbMeasure = (width - 48 - 32) / 3;
 
-import { Card } from "../components";
+import { Card1 } from "../components";
 
 import PropTypes from "prop-types";
 
 const FavoritesScreen = (props) => {
   const scrollX = new Animated.Value(0);
-  // const cards = [articles];
+  const cards = [articles];
 
   return (
     <Block flex center>
@@ -40,7 +41,7 @@ const FavoritesScreen = (props) => {
               source={Images.Products["path"]}
               style={[
                 styles.imageBlock,
-                { width: width - theme.SIZES.BASE * 2, height: 252 },
+                { width: width - theme.SIZES.BASE * 2, height: 152 },
               ]}
               imageStyle={{
                 width: width - theme.SIZES.BASE * 2,
@@ -63,23 +64,7 @@ const FavoritesScreen = (props) => {
             contentContainerStyle={{
               width: width * 2,
             }}
-          >
-            {/* {cards.map((item, index) => {
-              return (
-                <Card
-                  key={index}
-                  item={item}
-                  full
-                  titleStyle={styles.productTitle}
-                  imageStyle={{
-                    height: 300,
-                    width: "100%",
-                    resizeMode: "contain",
-                  }}
-                />
-              );
-            })} */}
-          </ScrollView>
+          ></ScrollView>
         </Block>
       </ScrollView>
     </Block>
