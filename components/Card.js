@@ -118,11 +118,13 @@ Card.propTypes = {
 
 const styles = StyleSheet.create({
   card: {
+    flex:1,
     backgroundColor: theme.COLORS.WHITE,
     marginVertical: theme.SIZES.BASE,
     borderWidth: 0,
     minHeight: 114,
-    marginBottom: 4
+    marginBottom: 4,
+    
   },
   cardTitle: {
     paddingHorizontal: 9,

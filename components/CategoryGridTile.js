@@ -41,50 +41,57 @@ const styles = StyleSheet.create({
     height: 200,
     margin: 10,
     // paddingVertical: 20,
+    // paddingVertical: 20,
     // paddingBottom: 50,
+   
   },
   touchable: {
     borderRadius: 10,
-    overflow: "hidden",
+    // overflow: "hidden",
+    // marginLeft:"auto"
   },
-  // gridItem: {
-  //   // flex: 1,
 
-  //   margin: 10,
-  //   height: 150,
-  //   borderRadius: 10,
-  //   overflow:
-  //     Platform.OS === "android" && Platform.Version >= 21
-  //       ? "hidden"
-  //       : "visible",
-  //   elevation: 5,
-  //   // paddingBottom: 50,
-  // },
-  imageContainer: {
-    width: "100%",
-    height: "100%",
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
-    overflow: "hidden",
-  },
-  image: {
-    width: "100%",
-    height: "100%",
-  },
   container: {
     // flex: 1,
-    // flexDirection: "column",
-
+    flexDirection: "column",
     borderRadius: 10,
     shadowColor: "black",
     shadowOpacity: 0.26,
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 20,
-    padding: 5,
+    // padding: 5,
     paddingBottom: 50,
     justifyContent: "center",
     alignItems: "center",
+    
+    
   },
+  imageContainer: {
+    flexDirection: "column",
+    width: "100%",
+    height: "100%",
+    // borderRadius: 3,
+    // elevation: 1,
+    // overflow: 'hidden',
+    // borderTopLeftRadius: 10,
+    // borderTopRightRadius: 10,
+    // overflow: "hidden",
+    // justifyContent: "center",
+    // alignItems: "center",
+
+    // flexDirection: "row",
+    // justifyContent: "flex-start",
+    // flexWrap: "wrap",
+  },
+  image: {
+    width: "100%",
+    height: "100%",
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
+    
+  },
+
   title: {
     // flexDirection: "row",
     fontFamily: "open-sans-bold",

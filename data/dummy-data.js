@@ -8,86 +8,86 @@ export const CATEGORIES = [
     "c1",
     "Temples",
     "#f5428d",
-    require("../assets/imgs/project13.jpg")
+    require("../assets/imgs/rangam.png")
   ),
   new Category(
     "c2",
-    "Divine Chant",
+    "Gods",
     "#f54242",
-    require("../assets/imgs/project13.jpg")
+    require("../assets/imgs/murugan.jpg")
   ),
   new Category(
     "c3",
-    "Divine Songs",
+    "Language",
     "#f5a442",
-    require("../assets/imgs/project13.jpg")
+    require("../assets/imgs/language.jpg")
   ),
-  new Category(
-    "c4",
-    "Mudra",
-    "#f5d142",
-    require("../assets/imgs/project13.jpg")
-  ),
-  new Category(
-    "c5",
-    "Thithilakam",
-    "#368dff",
-    require("../assets/imgs/project13.jpg")
-  ),
-  new Category(
-    "c6",
-    "Subha Muhurth",
-    "#41d95d",
-    require("../assets/imgs/project13.jpg")
-  ),
-  new Category(
-    "c7",
-    "Divine Sounds",
-    "#9eecff",
-    require("../assets/imgs/project13.jpg")
-  ),
-  new Category(
-    "c8",
-    "Vastu",
-    "#b9ffb0",
-    require("../assets/imgs/project13.jpg")
-  ),
-  new Category(
-    "c9",
-    "Wall Papers",
-    "#ffc7ff",
-    require("../assets/imgs/project13.jpg")
-  ),
-  new Category(
-    "c10",
-    "Divine Mantra",
-    "#47fced",
-    require("../assets/imgs/project13.jpg")
-  ),
-  new Category(
-    "c11",
-    "Pooja Stores",
-    "#47fced",
-    require("../assets/imgs/project13.jpg")
-  ),
-  new Category(
-    "c12",
-    "Reminders",
-    "#47fced",
-    require("../assets/imgs/project13.jpg")
-  ),
-  new Category(
-    "c13",
-    "Yantra",
-    "#47fced",
-    require("../assets/imgs/project13.jpg")
-  ),
-  new Category(
-    "c14",
-    "TD Stores",
-    "#47fced",
-    require("../assets/imgs/project13.jpg")
-  ),
+  // new Category(
+  //   "c4",
+  //   "Mudra",
+  //   "#f5d142",
+  //   require("../assets/imgs/project13.jpg")
+  // ),
+  // new Category(
+  //   "c5",
+  //   "Thithilakam",
+  //   "#368dff",
+  //   require("../assets/imgs/project13.jpg")
+  // ),
+  // new Category(
+  //   "c6",
+  //   "Subha Muhurth",
+  //   "#41d95d",
+  //   require("../assets/imgs/project13.jpg")
+  // ),
+  // new Category(
+  //   "c7",
+  //   "Divine Sounds",
+  //   "#9eecff",
+  //   require("../assets/imgs/project13.jpg")
+  // ),
+  // new Category(
+  //   "c8",
+  //   "Vastu",
+  //   "#b9ffb0",
+  //   require("../assets/imgs/project13.jpg")
+  // ),
+  // new Category(
+  //   "c9",
+  //   "Wall Papers",
+  //   "#ffc7ff",
+  //   require("../assets/imgs/project13.jpg")
+  // ),
+  // new Category(
+  //   "c10",
+  //   "Divine Mantra",
+  //   "#47fced",
+  //   require("../assets/imgs/project13.jpg")
+  // ),
+  // new Category(
+  //   "c11",
+  //   "Pooja Stores",
+  //   "#47fced",
+  //   require("../assets/imgs/project13.jpg")
+  // ),
+  // new Category(
+  //   "c12",
+  //   "Reminders",
+  //   "#47fced",
+  //   require("../assets/imgs/project13.jpg")
+  // ),
+  // new Category(
+  //   "c13",
+  //   "Yantra",
+  //   "#47fced",
+  //   require("../assets/imgs/project13.jpg")
+  // ),
+  // new Category(
+  //   "c14",
+  //   "TD Stores",
+  //   "#47fced",
+  //   require("../assets/imgs/project13.jpg")
+  // ),
 ];
 
 export const MEALS = [
