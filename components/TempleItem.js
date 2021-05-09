@@ -38,7 +38,7 @@ const TempleItem = (props) => {
 const styles = StyleSheet.create({
   templeItem: {
     flex: 1,
-    height: 180,
+    height: 300,
     width: "100%",
     backgroundColor: "#f5f5f5",
     borderRadius: 10,
@@ -57,13 +57,14 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
   },
   mealHeader: {
+    alignSelf: "flex-end",
     height: "85%",
     alignItems: "center",
   },
   mealDetail: {
     alignSelf: "flex-end",
     alignItems: "center",
-    height: "5%",
+    height: "10%",
   },
   titleContainer: {
     flex: 3,

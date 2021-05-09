@@ -7,7 +7,9 @@ import TempleList from "../components/TempleList";
 const CategoryTempleScreen = (props) => {
   const catId = props.navigation.getParam("categoryId");
 
-  const availableTemples = useSelector((state) => state.temples.filteredTemples);
+  const availableTemples = useSelector(
+    (state) => state.temples.filteredTemples
+  );
 
   const displayedTemples = availableTemples.filter(
     (meal) => meal.categoryIds.indexOf(catId) >= 0
@@ -21,8 +23,11 @@ const CategoryTempleScreen = (props) => {
 CategoryTempleScreen.navigationOptions = (navigationData) => {
   const catId = navigationData.navigation.getParam("categoryId");
 
-  const selectedCategory = TEMPLES.find((x) => String(x.categoryIds).includes(catId));
+  const selectedCategory = TEMPLES.find((x) =>
+    String(x.categoryIds).includes(catId)
+  );
 
+  if (!selectedCategory) return null;
 
   return {
     headerTitle: selectedCategory.title,

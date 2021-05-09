@@ -346,11 +346,11 @@ export const TEMPLES = [
   new Temple(
     "m1",
     ["c1", "c2"],
-    "T1",
-    "Banjara hills Road no.12, Hyderabad",
-    "6 AM to 11 AM and 5 PM to 9 PM",
+    "Jagannath Temple",
+    "Address: Banjara Hills",
+    "Timings: All days of the week -6:00 AM to 11:00 PM, 5:00 PM to 9:00 PM",
     // require("../assets/imgs/language.jpg"),
-    require("../assets/imgs/language.jpg"),
+    require("../assets/imgs/Temples/t1.jpg"),
     [
       "ISKCON Hyderabad located in Nampally region, is one of the best temples in Hyderabad. Apart from the main deity Lord Krishna, the temple also showcases beautiful idols of Sri Gaura Nitai, Sri Jagannatha-Baldeva-Subhadra, and Sri Radha Madan Mohana. Regular pujas and aortas are offered in the temple with special spiritual classes on weekends.",
     ],
@@ -362,11 +362,11 @@ export const TEMPLES = [
   new Temple(
     "m3",
     ["c1", "c2"],
-    "T1",
-    "Banjara hills Road no.12, Hyderabad",
-    "6 AM to 11 AM and 5 PM to 9 PM",
+    "Birla Mandir",
+    "Address: Hill Fort Rd, Ambedkar Colony, Khairatabad",
+    "Timings: All days of the week -7:00 AM to 12:00 PM, 3:00 PM to 9:00 PM",
     // require("../assets/imgs/language.jpg"),
-    require("../assets/imgs/language.jpg"),
+    require("../assets/imgs/Temples/t2.jpg"),
     [
       "ISKCON Hyderabad located in Nampally region, is one of the best temples in Hyderabad. Apart from the main deity Lord Krishna, the temple also showcases beautiful idols of Sri Gaura Nitai, Sri Jagannatha-Baldeva-Subhadra, and Sri Radha Madan Mohana. Regular pujas and aortas are offered in the temple with special spiritual classes on weekends.",
     ],
@@ -378,10 +378,10 @@ export const TEMPLES = [
   new Temple(
     "m2",
     ["c1", "c2"],
-    "T1",
-    "Banjara hills Road no.12, Hyderabad",
-    "6 AM to 11 AM and 5 PM to 9 PM",
-    require("../assets/imgs/language.jpg"),
+    "ISKCON Temple",
+    "Address:  Hare Krishna Land, Nampally Station Road, Abids",
+    "Timings: All days of the week -4:30 AM to 8:30 PM",
+    require("../assets/imgs/Temples/t3.jpg"),
     // require("../assets/imgs/language.jpg"),
     [
       "ISKCON Hyderabad located in Nampally region, is one of the best temples in Hyderabad. Apart from the main deity Lord Krishna, the temple also showcases beautiful idols of Sri Gaura Nitai, Sri Jagannatha-Baldeva-Subhadra, and Sri Radha Madan Mohana. Regular pujas and aortas are offered in the temple with special spiritual classes on weekends.",
