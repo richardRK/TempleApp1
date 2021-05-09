@@ -13,11 +13,14 @@ import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
 
 import mealsReducer from "./store/reducers/meals";
+import templesReducer from "./store/reducers/temples";
+
 
 enableScreens();
 
 const rootReducer = combineReducers({
   meals: mealsReducer,
+  temples: templesReducer,
 });
 
 const store = createStore(rootReducer);

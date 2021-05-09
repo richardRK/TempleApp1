@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
     // paddingVertical: 20,
     // paddingVertical: 20,
     // paddingBottom: 50,
-   
   },
   touchable: {
     borderRadius: 10,
@@ -63,8 +62,6 @@ const styles = StyleSheet.create({
     paddingBottom: 50,
     justifyContent: "center",
     alignItems: "center",
-    
-    
   },
   imageContainer: {
     flexDirection: "column",
@@ -89,7 +86,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     flexWrap: "wrap",
-    
   },
 
   title: {

@@ -1,5 +1,6 @@
 import Category from "../models/category";
 import Meal from "../models/meal";
+import Temple from "../models/temple";
 
 import Images from "../constants/Images";
 
@@ -10,94 +11,23 @@ export const CATEGORIES = [
     "#f5428d",
     require("../assets/imgs/rangam.png")
   ),
-  new Category(
-    "c2",
-    "Gods",
-    "#f54242",
-    require("../assets/imgs/murugan.jpg")
-  ),
+  new Category("c2", "Gods", "#f54242", require("../assets/imgs/murugan.jpg")),
   new Category(
     "c3",
     "Language",
     "#f5a442",
     require("../assets/imgs/language.jpg")
   ),
-  // new Category(
-  //   "c4",
-  //   "Mudra",
-  //   "#f5d142",
-  //   require("../assets/imgs/project13.jpg")
-  // ),
-  // new Category(
-  //   "c5",
-  //   "Thithilakam",
-  //   "#368dff",
-  //   require("../assets/imgs/project13.jpg")
-  // ),
-  // new Category(
-  //   "c6",
-  //   "Subha Muhurth",
-  //   "#41d95d",
-  //   require("../assets/imgs/project13.jpg")
-  // ),
-  // new Category(
-  //   "c7",
-  //   "Divine Sounds",
-  //   "#9eecff",
-  //   require("../assets/imgs/project13.jpg")
-  // ),
-  // new Category(
-  //   "c8",
-  //   "Vastu",
-  //   "#b9ffb0",
-  //   require("../assets/imgs/project13.jpg")
-  // ),
-  // new Category(
-  //   "c9",
-  //   "Wall Papers",
-  //   "#ffc7ff",
-  //   require("../assets/imgs/project13.jpg")
-  // ),
-  // new Category(
-  //   "c10",
-  //   "Divine Mantra",
-  //   "#47fced",
-  //   require("../assets/imgs/project13.jpg")
-  // ),
-  // new Category(
-  //   "c11",
-  //   "Pooja Stores",
-  //   "#47fced",
-  //   require("../assets/imgs/project13.jpg")
-  // ),
-  // new Category(
-  //   "c12",
-  //   "Reminders",
-  //   "#47fced",
-  //   require("../assets/imgs/project13.jpg")
-  // ),
-  // new Category(
-  //   "c13",
-  //   "Yantra",
-  //   "#47fced",
-  //   require("../assets/imgs/project13.jpg")
-  // ),
-  // new Category(
-  //   "c14",
-  //   "TD Stores",
-  //   "#47fced",
-  //   require("../assets/imgs/project13.jpg")
-  // ),
 ];
 
 export const MEALS = [
   new Meal(
     "m1",
     ["c1", "c2"],
-    "Spaghetti with Tomato Sauce",
+    "Temples",
     "affordable",
     "simple",
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg",
+    "https://cdn.pixabay.com/photo/2018/07/11/21/51/toast-3532016_1280.jpg",
     20,
     [
       "4 Tomatoes",
@@ -406,6 +336,57 @@ export const MEALS = [
       "Serve with Baguette",
     ],
     true,
+    true,
+    true,
+    true
+  ),
+];
+
+export const TEMPLES = [
+  new Temple(
+    "m1",
+    ["c1", "c2"],
+    "T1",
+    "Banjara hills Road no.12, Hyderabad",
+    "6 AM to 11 AM and 5 PM to 9 PM",
+    // require("../assets/imgs/language.jpg"),
+    require("../assets/imgs/language.jpg"),
+    [
+      "ISKCON Hyderabad located in Nampally region, is one of the best temples in Hyderabad. Apart from the main deity Lord Krishna, the temple also showcases beautiful idols of Sri Gaura Nitai, Sri Jagannatha-Baldeva-Subhadra, and Sri Radha Madan Mohana. Regular pujas and aortas are offered in the temple with special spiritual classes on weekends.",
+    ],
+    false,
+    true,
+    true,
+    true
+  ),
+  new Temple(
+    "m3",
+    ["c1", "c2"],
+    "T1",
+    "Banjara hills Road no.12, Hyderabad",
+    "6 AM to 11 AM and 5 PM to 9 PM",
+    // require("../assets/imgs/language.jpg"),
+    require("../assets/imgs/language.jpg"),
+    [
+      "ISKCON Hyderabad located in Nampally region, is one of the best temples in Hyderabad. Apart from the main deity Lord Krishna, the temple also showcases beautiful idols of Sri Gaura Nitai, Sri Jagannatha-Baldeva-Subhadra, and Sri Radha Madan Mohana. Regular pujas and aortas are offered in the temple with special spiritual classes on weekends.",
+    ],
+    false,
+    true,
+    true,
+    true
+  ),
+  new Temple(
+    "m2",
+    ["c1", "c2"],
+    "T1",
+    "Banjara hills Road no.12, Hyderabad",
+    "6 AM to 11 AM and 5 PM to 9 PM",
+    require("../assets/imgs/language.jpg"),
+    // require("../assets/imgs/language.jpg"),
+    [
+      "ISKCON Hyderabad located in Nampally region, is one of the best temples in Hyderabad. Apart from the main deity Lord Krishna, the temple also showcases beautiful idols of Sri Gaura Nitai, Sri Jagannatha-Baldeva-Subhadra, and Sri Radha Madan Mohana. Regular pujas and aortas are offered in the temple with special spiritual classes on weekends.",
+    ],
+    false,
     true,
     true,
     true

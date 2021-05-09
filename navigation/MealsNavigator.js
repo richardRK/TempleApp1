@@ -21,6 +21,8 @@ import OnBoardingScreen from "../screens/Onboarding";
 import BlogScreen from "../screens/BlogScreen";
 import PanditsScreen from "../screens/PanditsScreen";
 
+import CategoryTempleScreen from "../screens/CategoryTempleScreen";
+
 import CategoriesScreen1 from "../screens/CategoriesScreen1";
 
 const defaultStackNavOptions = {
@@ -42,9 +44,15 @@ const MealsNavigator = createStackNavigator(
     Categories: {
       screen: CategoriesScreen,
     },
-    CategoryMeals: {
-      screen: CategoryMealsScreen,
+
+    CategoryTemples: {
+      screen: CategoryTempleScreen,
     },
+
+
+    // CategoryMeals: {
+    //   screen: CategoryMealsScreen,
+    // },
     MealDetail: MealDetailScreen,
   },
   {

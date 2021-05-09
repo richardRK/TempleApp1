@@ -38,7 +38,7 @@ const CategoriesScreen = (props) => {
         image={itemData.item.image}
         onSelect={() => {
           props.navigation.navigate({
-            routeName: "CategoryMeals",
+            routeName: "CategoryTemples",
             params: {
               categoryId: itemData.item.id,
             },
