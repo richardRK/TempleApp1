@@ -352,7 +352,8 @@ export const TEMPLES = [
     // require("../assets/imgs/language.jpg"),
     require("../assets/imgs/Temples/t1.jpg"),
     [
-      "ISKCON Hyderabad located in Nampally region, is one of the best temples in Hyderabad. Apart from the main deity Lord Krishna, the temple also showcases beautiful idols of Sri Gaura Nitai, Sri Jagannatha-Baldeva-Subhadra, and Sri Radha Madan Mohana. Regular pujas and aortas are offered in the temple with special spiritual classes on weekends.",
+      "Jagannath is referred to as Lord of the Universe. The Odia community of the city of Hyderabad has built the modern Jagannath temple dedicating it to the Hindu God Jagannath. It is said to be a replica of the Jagannath temple in Puri, West Bengal.This temple is very famous for its annual Rathyatra festival swarmed by thousands of devotees. ",
+      "The temple in the centre of the city is a recent construction in the year of 2009. This contemporary Indian temple is considered as a sacred site for the celebration of various festivals in the city",
     ],
     false,
     true,
@@ -368,7 +369,8 @@ export const TEMPLES = [
     // require("../assets/imgs/language.jpg"),
     require("../assets/imgs/Temples/t2.jpg"),
     [
-      "ISKCON Hyderabad located in Nampally region, is one of the best temples in Hyderabad. Apart from the main deity Lord Krishna, the temple also showcases beautiful idols of Sri Gaura Nitai, Sri Jagannatha-Baldeva-Subhadra, and Sri Radha Madan Mohana. Regular pujas and aortas are offered in the temple with special spiritual classes on weekends.",
+      "This 200 ft high glistening white structure of Birla Mandir was built in 19th century by Swami Ranganathananda of Ramakrishna Mission. This place is located towards the southern end of Hussain Sagar Lake in the city. Situated on top of the Kala Pahad the monument dots the skyline of Hyderabad.",
+      "Built on a 13-acre plot the main attraction of the temple is the 11 feet tall granite idol of deity Lord Venkateswara with a carved lotus forming an umbrella on the top. Interestingly the temple does not showcase traditional bells to keep the temple atmosphere and nearby surroundings conducive to meditation.",
     ],
     false,
     true,

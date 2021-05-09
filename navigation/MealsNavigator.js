@@ -24,6 +24,7 @@ import PanditsScreen from "../screens/PanditsScreen";
 import CategoryTempleScreen from "../screens/CategoryTempleScreen";
 
 import CategoriesScreen1 from "../screens/CategoriesScreen1";
+import TempleDetailScreen from "../screens/TempleDetailScreen";
 
 const defaultStackNavOptions = {
   headerStyle: {
@@ -49,10 +50,11 @@ const MealsNavigator = createStackNavigator(
       screen: CategoryTempleScreen,
     },
 
-
     // CategoryMeals: {
     //   screen: CategoryMealsScreen,
     // },
+
+    TempleDetail: TempleDetailScreen,
     MealDetail: MealDetailScreen,
   },
   {

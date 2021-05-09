@@ -21,16 +21,16 @@ const CategoryTempleScreen = (props) => {
 };
 
 CategoryTempleScreen.navigationOptions = (navigationData) => {
-  const catId = navigationData.navigation.getParam("categoryId");
+  //   const catId = navigationData.navigation.getParam("categoryId");
 
-  const selectedCategory = TEMPLES.find((x) =>
-    String(x.categoryIds).includes(catId)
-  );
+  //   const selectedCategory = TEMPLES.find((x) =>
+  //     String(x.categoryIds).includes(catId)
+  //   );
 
-  if (!selectedCategory) return null;
+  //   if (!selectedCategory) return null;
 
   return {
-    headerTitle: selectedCategory.title,
+    headerTitle: "Near By Temples",
   };
 };
 

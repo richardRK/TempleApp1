@@ -15,15 +15,15 @@ const TempleList = (props) => {
         imageUrl={itemData.item.imageUrl}
         timings={itemData.item.timings}
         address={itemData.item.address}
-        // details={itemData.item.details}
-        // onSelectMeal={() => {
-        //   props.navigation.navigate({
-        //     routeName: 'MealDetail',
-        //     params: {
-        //       mealId: itemData.item.id
-        //     }
-        //   });
-        // }}
+        details={itemData.item.details}
+        onSelectMeal={() => {
+          props.navigation.navigate({
+            routeName: 'TempleDetail',
+            params: {
+              templeId: itemData.item.id
+            }
+          });
+        }}
       />
     );
   };

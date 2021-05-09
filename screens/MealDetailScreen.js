@@ -1,19 +1,12 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from "react";
 
-import {
-  ScrollView,
-  View,
-  Image,
-  Text,
-  StyleSheet,
-} from "react-native";
+import { ScrollView, View, Image, Text, StyleSheet } from "react-native";
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from "react-redux";
 
 import HeaderButton from "../components/HeaderButton";
 import DefaultText from "../components/DefaultText";
-import { toggleFavorite } from '../store/actions/meals';
-
+import { toggleFavorite } from "../store/actions/meals";
 
 const ListItem = (props) => {
   return (
@@ -26,7 +19,7 @@ const ListItem = (props) => {
 const MealDetailScreen = (props) => {
   const availableMeals = useSelector((state) => state.meals.meals);
 
-  const mealId = props.navigation.getParam("mealId");
+  const mealId = props.navigation.getParam("templeId");
 
   const currentMealIsFavorite = useSelector((state) =>
     state.meals.favoriteMeals.some((meal) => meal.id === mealId)
