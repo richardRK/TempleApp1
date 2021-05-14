@@ -17,6 +17,29 @@ import { SearchBar } from "react-native-elements";
 
 import { Ionicons } from "@expo/vector-icons";
 
+import { useColorScheme, AppearanceProvider } from "react-native-appearance";
+
+import {
+  NavigationContainer,
+  DarkTheme,
+  DrawerActions,
+} from "@react-navigation/native";
+
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import { createStackNavigator } from "@react-navigation/stack";
+import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+
+import Music from "../screens/MusicScreen";
+import Fav from "../screens/FavoritesScreen";
+
+const Stack = createStackNavigator();
+const MaterialBottomTabs = createMaterialBottomTabNavigator();
+const MaterialTopTabs = createMaterialTopTabNavigator();
+const Drawer = createDrawerNavigator();
+const Tab = createBottomTabNavigator();
+
 const CategoriesScreen = (props) => {
   const [categories, setFilterCategory] = useState(CATEGORIES);
 
@@ -48,8 +71,54 @@ const CategoriesScreen = (props) => {
     );
   };
 
+  const MainStackNavigator = () => {
+    return (
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: "#9AC4F8",
+          },
+          headerTintColor: "white",
+          headerBackTitle: "Back",
+        }}
+      >
+        <Stack.Screen name="Music" component={Music} />
+      </Stack.Navigator>
+    );
+  };
+
+  const FavStackNavigator = () => {
+    return (
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: "#9AC4F8",
+          },
+          headerTintColor: "white",
+          headerBackTitle: "Back",
+        }}
+      >
+        <Stack.Screen name="Favorite" component={Fav} />
+      </Stack.Navigator>
+    );
+  };
+
+  const BottomTabNavigator = () => {
+    return (
+      <Tab.Navigator>
+        <Tab.Screen name="Main" component={MainStackNavigator} />
+        <Tab.Screen name="Fav" component={FavStackNavigator} />
+      </Tab.Navigator>
+    );
+  };
+
   return (
     <View>
+      <NavigationContainer>
+        {/* <MainStackNavigator /> */}
+        {/* <DrawerNavigator /> */}
+        <BottomTabNavigator />
+      </NavigationContainer>
       <SearchBar
         style={styles.searchbar}
         containerStyle={styles.searchcontainer}
