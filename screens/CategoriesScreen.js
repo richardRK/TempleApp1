@@ -114,11 +114,9 @@ const CategoriesScreen = (props) => {
 
   return (
     <View>
-      <NavigationContainer>
-        {/* <MainStackNavigator /> */}
-        {/* <DrawerNavigator /> */}
+      {/* <NavigationContainer>
         <BottomTabNavigator />
-      </NavigationContainer>
+      </NavigationContainer> */}
       <SearchBar
         style={styles.searchbar}
         containerStyle={styles.searchcontainer}
