@@ -13,6 +13,7 @@ const bottomTabNavigator = createBottomTabNavigator(
   {
     Home: {
       screen: Notification,
+      
       navigationOptions: {
         tabBarIcon: ({ tintColor }) => (
           <Icon name="home" size={25} color={tintColor} />
