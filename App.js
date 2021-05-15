@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 
-
 import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
 
@@ -10,20 +9,14 @@ import templesReducer from "./store/reducers/temples";
 
 import Navigator from "./navigation/Navigator";
 
-
-const Tab = createMaterialTopTabNavigator();
 export default class App extends Component {
-  
-
   render() {
-
     const rootReducer = combineReducers({
       meals: mealsReducer,
       temples: templesReducer,
     });
-    
-    const store = createStore(rootReducer);
 
+    const store = createStore(rootReducer);
 
     console.disableYellowBox = true;
 
@@ -38,8 +31,6 @@ export default class App extends Component {
       ctaRight,
       titleStyle,
     } = this.props;
-
-
 
     return (
       <Provider store={store}>
