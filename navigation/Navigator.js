@@ -8,6 +8,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createAppContainer } from "react-navigation";
 import { createBottomTabNavigator } from "react-navigation-tabs";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import Test1Drawer from "./Test1Drawer";
+import Test2Drawer from "./Test2Drawer";
 
 const bottomTabNavigator = createBottomTabNavigator(
   {
@@ -50,17 +52,17 @@ const Navigator = (props) => {
           tabBarOptions={{
             activeTintColor: "#e91e63",
             labelStyle: { fontSize: 12 },
-            style: { backgroundColor: "powderblue", marginVertical: 68 },
+            style: { backgroundColor: "powderblue", marginVertical: 28 },
           }}
         >
           <Tab.Screen
             name="Feed"
-            component={Feed}
+            component={Test1Drawer}
             options={{ tabBarLabel: "Home" }}
           />
           <Tab.Screen
             name="Notifications"
-            component={Notification}
+            component={Test2Drawer}
             options={{ tabBarLabel: "Updates" }}
           />
         </Tab.Navigator>
