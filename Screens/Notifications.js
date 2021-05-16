@@ -3,8 +3,8 @@ import React from "react";
 import { View, Text } from "react-native";
 const Notifications = (props) => {
   return (
-    <View>
-      <Text>In Feed</Text>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Text>In Notification</Text>
     </View>
   );
 };

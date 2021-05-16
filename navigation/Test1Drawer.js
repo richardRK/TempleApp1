@@ -1,16 +1,19 @@
 import React from "react";
+import { View } from "react-native";
+
 import Feed from "../Screens/Feed";
 import Stack1 from "./Stack1";
 
 import {
-    createDrawerNavigator,
-    DrawerContentScrollView,
-    DrawerItemList,
-    DrawerItem,
-  } from '@react-navigation/drawer';
+  createDrawerNavigator,
+  DrawerContentScrollView,
+  DrawerItemList,
+  DrawerItem,
+} from "@react-navigation/drawer";
 
 function CustomDrawerContent(props) {
-    return (
+  return (
+    <View style={{ flex: 1 }}>
       <DrawerContentScrollView {...props}>
         <DrawerItemList {...props} />
         <DrawerItem
@@ -22,15 +25,18 @@ function CustomDrawerContent(props) {
           onPress={() => props.navigation.toggleDrawer()}
         />
       </DrawerContentScrollView>
-    );
-  }
+    </View>
+  );
+}
 
 const Drawer = createDrawerNavigator();
 
 const Test1Drawer = (props) => {
   return (
-    <Drawer.Navigator  drawerContent={props => <CustomDrawerContent {...props} />}>
-      <Drawer.Screen name="Gym" component={Stack1} />
+    <Drawer.Navigator
+      drawerContent={(props) => <CustomDrawerContent {...props} />}
+    >
+      <Drawer.Screen name="Gym" component={Stack1}  />
     </Drawer.Navigator>
   );
 };
