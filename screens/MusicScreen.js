@@ -1,23 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 import {
   TouchableOpacity,
   StyleSheet,
   FlatList,
   View,
   Image,
+  Text,
 } from "react-native";
 
-const MusicScreen = props => {
+const MusicScreen = (props) => {
   return (
     <View>
-      
+      <Text>In Music</Text>
     </View>
   );
 };
 
-MusicScreen.propTypes = {
-  
-};
+MusicScreen.propTypes = {};
 
 export default MusicScreen;

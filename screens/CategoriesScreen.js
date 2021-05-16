@@ -71,52 +71,8 @@ const CategoriesScreen = (props) => {
     );
   };
 
-  const MainStackNavigator = () => {
-    return (
-      <Stack.Navigator
-        screenOptions={{
-          headerStyle: {
-            backgroundColor: "#9AC4F8",
-          },
-          headerTintColor: "white",
-          headerBackTitle: "Back",
-        }}
-      >
-        <Stack.Screen name="Music" component={Music} />
-      </Stack.Navigator>
-    );
-  };
-
-  const FavStackNavigator = () => {
-    return (
-      <Stack.Navigator
-        screenOptions={{
-          headerStyle: {
-            backgroundColor: "#9AC4F8",
-          },
-          headerTintColor: "white",
-          headerBackTitle: "Back",
-        }}
-      >
-        <Stack.Screen name="Favorite" component={Fav} />
-      </Stack.Navigator>
-    );
-  };
-
-  const BottomTabNavigator = () => {
-    return (
-      <Tab.Navigator>
-        <Tab.Screen name="Main" component={MainStackNavigator} />
-        <Tab.Screen name="Fav" component={FavStackNavigator} />
-      </Tab.Navigator>
-    );
-  };
-
   return (
     <View>
-      {/* <NavigationContainer>
-        <BottomTabNavigator />
-      </NavigationContainer> */}
       <SearchBar
         style={styles.searchbar}
         containerStyle={styles.searchcontainer}
@@ -142,59 +98,7 @@ const CategoriesScreen = (props) => {
 };
 
 CategoriesScreen.navigationOptions = (navData) => {
-  // arrayholder = [];
-
-  return {
-    headerTitle: "",
-    headerStyle: {
-      height: 100,
-      backgroundColor: Platform.OS === "android" ? Colors.primaryColor : "",
-    },
-    headerLeft: (
-      <View style={styles.screen}>
-        <HeaderButtons HeaderButtonComponent={HeaderButton}>
-          <Item
-            style={styles.hamburger}
-            title="Menu"
-            iconName="ios-menu"
-            onPress={() => {
-              navData.navigation.toggleDrawer();
-            }}
-          />
-        </HeaderButtons>
-      </View>
-    ),
-
-    headerRight: (
-      <View style={styles.screen}>
-        <TouchableOpacity
-          style={styles.icons}
-          // onPress={() => navigation.navigate({ routeName: "Notification" })}
-        >
-          <Ionicons
-            style={styles.icon1}
-            name="language-outline"
-            size={20}
-            color="white"
-          />
-
-          <Ionicons
-            style={styles.icon1}
-            name="location-outline"
-            size={20}
-            color="white"
-          />
-
-          <Ionicons
-            style={styles.icon1}
-            name="ios-notifications"
-            size={20}
-            color="white"
-          />
-        </TouchableOpacity>
-      </View>
-    ),
-  };
+  
 };
 const styles = StyleSheet.create({
   screen: {

@@ -9,7 +9,6 @@ import { Ionicons } from "@expo/vector-icons";
 import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
 
 import CategoriesScreen from "../screens/CategoriesScreen";
-import CategoryMealsScreen from "../screens/CategoryMealsScreen";
 import MealDetailScreen from "../screens/MealDetailScreen";
 import FavoritesScreen from "../screens/FavoritesScreen";
 import FiltersScreen from "../screens/FiltersScreen";
@@ -20,11 +19,10 @@ import TemplesScreen from "../screens/TemplesScreen";
 import OnBoardingScreen from "../screens/Onboarding";
 import BlogScreen from "../screens/BlogScreen";
 import PanditsScreen from "../screens/PanditsScreen";
-
 import CategoryTempleScreen from "../screens/CategoryTempleScreen";
-
-import CategoriesScreen1 from "../screens/CategoriesScreen1";
 import TempleDetailScreen from "../screens/TempleDetailScreen";
+
+import TopNavigation from "../navigation/TopNavigation";
 
 const defaultStackNavOptions = {
   headerStyle: {
@@ -50,10 +48,6 @@ const MealsNavigator = createStackNavigator(
       screen: CategoryTempleScreen,
     },
 
-    // CategoryMeals: {
-    //   screen: CategoryMealsScreen,
-    // },
-
     TempleDetail: TempleDetailScreen,
     MealDetail: MealDetailScreen,
   },
@@ -62,6 +56,12 @@ const MealsNavigator = createStackNavigator(
     defaultNavigationOptions: defaultStackNavOptions,
   }
 );
+
+const TopTabNavigator = createStackNavigator({
+  Categories: {
+    screen: TopNavigation,
+  },
+});
 
 const FavNavigator = createStackNavigator(
   {
@@ -116,8 +116,24 @@ const BlogNavigator = createStackNavigator(
 );
 
 const tabScreenConfig = {
+  // Meals: {
+  //   screen: MealsNavigator,
+  //   navigationOptions: {
+  //     tabBarIcon: (tabInfo) => {
+  //       return <Ionicons name="home" size={20} color={tabInfo.tintColor} />;
+  //     },
+  //     tabBarColor: Colors.primaryColor,
+  //     tabBarLabel:
+  //       Platform.OS === "android" ? (
+  //         <Text style={{ fontFamily: "open-sans-bold" }}>Home</Text>
+  //       ) : (
+  //         "Home"
+  //       ),
+  //   },
+  // },
+
   Meals: {
-    screen: MealsNavigator,
+    screen: TopTabNavigator,
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
         return <Ionicons name="home" size={20} color={tabInfo.tintColor} />;
@@ -285,6 +301,13 @@ const MainNavigator = createDrawerNavigator(
         drawerLabel: "Meals",
       },
     },
+
+    // MealsFavs2: {
+    //   screen: TopNavigation,
+    //   navigationOptions: {
+    //     drawerLabel: "Meals",
+    //   },
+    // },
     // Filters: FiltersNavigator,
     Filters: FiltersNavigator,
   },
