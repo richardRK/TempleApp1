@@ -18,6 +18,8 @@ import { HeaderButtons, Item } from "react-navigation-header-buttons";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import Drawer1 from "./Drawer1";
+import Drawer2 from "./Drawer2";
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -35,12 +37,12 @@ const TopNavigation = (props) => {
         >
           <Tab.Screen
             name="Categories"
-            component={CategoriesScreen}
+            component={Drawer1}
             options={{ tabBarLabel: "Home" }}
           />
           <Tab.Screen
             name="Music"
-            component={MusicScreen}
+            component={Drawer2}
             options={{ tabBarLabel: "Updates" }}
           />
         </Tab.Navigator>

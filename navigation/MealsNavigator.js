@@ -116,7 +116,7 @@ const BlogNavigator = createStackNavigator(
 );
 
 const tabScreenConfig = {
-  // Meals: {
+  // Meals1: {
   //   screen: MealsNavigator,
   //   navigationOptions: {
   //     tabBarIcon: (tabInfo) => {
@@ -132,7 +132,7 @@ const tabScreenConfig = {
   //   },
   // },
 
-  Meals: {
+  Meals2: {
     screen: TopTabNavigator,
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
