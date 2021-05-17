@@ -4,11 +4,7 @@ import { View, FlatList, StyleSheet } from "react-native";
 import TempleItem from "./TempleItem";
 
 const TempleList = (props) => {
-
-
   const renderTempleItem = (itemData) => {
-
-
     return (
       <TempleItem
         title={itemData.item.title}
@@ -17,11 +13,8 @@ const TempleList = (props) => {
         address={itemData.item.address}
         details={itemData.item.details}
         onSelectMeal={() => {
-          props.navigation.navigate({
-            routeName: 'TempleDetail',
-            params: {
-              templeId: itemData.item.id
-            }
+          props.navigation.navigate("TempleDetail", {
+            param1: itemData.item.id,
           });
         }}
       />

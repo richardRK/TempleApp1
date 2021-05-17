@@ -29,11 +29,11 @@ const Stack1 = (props) => {
 
     const res =  props;
   return (
-    <Stack.Navigator initialRouteName="GymIndex">
+    <Stack.Navigator initialRouteName="Categories">
       <Stack.Screen name="Categories" component={CategoriesScreen} />
-      {/* <Stack.Screen name="CategoryTemples" component={CategoryTempleScreen} />
+      <Stack.Screen name="CategoryTemples" component={CategoryTempleScreen} />
       <Stack.Screen name="TempleDetail" component={TempleDetailScreen} />
-      <Stack.Screen name="MealDetail" component={MealDetailScreen} /> */}
+      <Stack.Screen name="MealDetail" component={MealDetailScreen} />
     </Stack.Navigator>
   );
 };

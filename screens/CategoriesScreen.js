@@ -60,12 +60,14 @@ const CategoriesScreen = (props) => {
         color={itemData.item.color}
         image={itemData.item.image}
         onSelect={() => {
-          props.navigation.navigate({
-            routeName: "CategoryTemples",
-            params: {
-              categoryId: itemData.item.id,
-            },
-          });
+          // props.navigation.navigate({
+          //   routeName: "CategoryTemples",
+          //   params: {
+          //     categoryId: itemData.item.id,
+          //   },
+          // });
+
+          props.navigation.navigate("CategoryTemples", itemData.item.id);
         }}
       />
     );
@@ -97,8 +99,8 @@ const CategoriesScreen = (props) => {
   );
 };
 
-CategoriesScreen.navigationOptions = (navData) => {
-  
+CategoriesScreen.navigationOptions = (navigationData) => {
+  const catId = navigationData.navigation.getParam("categoryId");
 };
 const styles = StyleSheet.create({
   screen: {

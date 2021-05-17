@@ -19,7 +19,7 @@ const ListItem = (props) => {
 const TempleDetailScreen = (props) => {
   const availableTemples = useSelector((state) => state.temples.temples);
 
-  const templeId = props.navigation.getParam("templeId");
+  const templeId = props.route.params.param1;
 
   const currenttempleIsFavorite = useSelector((state) =>
     state.temples.favoriteTemples.some((temple) => temple.id === templeId)

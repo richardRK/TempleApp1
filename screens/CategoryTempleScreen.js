@@ -5,7 +5,7 @@ import { TEMPLES } from "../data/dummy-data";
 import TempleList from "../components/TempleList";
 
 const CategoryTempleScreen = (props) => {
-  const catId = props.navigation.getParam("categoryId");
+  const catId = props.route.params;
 
   const availableTemples = useSelector(
     (state) => state.temples.filteredTemples
@@ -16,7 +16,7 @@ const CategoryTempleScreen = (props) => {
   );
 
   return (
-    <TempleList listData={displayedTemples} navigation={props.navigation} />
+    <TempleList listData={availableTemples} navigation={props.navigation} />
   );
 };
 

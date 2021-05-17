@@ -61,6 +61,12 @@ const TopTabNavigator = createStackNavigator({
   Categories: {
     screen: TopNavigation,
   },
+  CategoryTemples: {
+    screen: CategoryTempleScreen,
+  },
+
+  TempleDetail: TempleDetailScreen,
+  MealDetail: MealDetailScreen,
 });
 
 const FavNavigator = createStackNavigator(
