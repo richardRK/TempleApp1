@@ -1,39 +1,19 @@
-import React, { useState, useEffect, useCallback } from "react";
-import {
-  TouchableOpacity,
-  StyleSheet,
-  FlatList,
-  View,
-  Image,
-  ScrollView,
-} from "react-native";
-
-import { HeaderButtons, Item } from "react-navigation-header-buttons";
+import React, { useState } from "react";
+import { StyleSheet, FlatList, View, ScrollView } from "react-native";
 
 import { CATEGORIES } from "../data/dummy-data";
 import CategoryGridTile from "../components/CategoryGridTile";
-import HeaderButton from "../components/HeaderButton";
 import Colors from "../constants/Colors";
 import { SearchBar } from "react-native-elements";
 
-import { Ionicons } from "@expo/vector-icons";
-
-import { useColorScheme, AppearanceProvider } from "react-native-appearance";
-
-import {
-  NavigationContainer,
-  DarkTheme,
-  DrawerActions,
-} from "@react-navigation/native";
+import Carousel from "../components/Carousel";
+import { CAROUSEL_DATA } from "../data/dummy-data";
 
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
-import Music from "../screens/MusicScreen";
-import Fav from "../screens/FavoritesScreen";
 
 const Stack = createStackNavigator();
 const MaterialBottomTabs = createMaterialBottomTabNavigator();
@@ -80,6 +60,7 @@ const CategoriesScreen = (props) => {
           value={categories}
           autoCorrect={false}
         />
+        <Carousel data={CAROUSEL_DATA} />
         <FlatList
           keyExtractor={(item, index) => item.id}
           data={categories}
@@ -102,6 +83,15 @@ const styles = StyleSheet.create({
     paddingTop: 5,
     // marginTop: 20,
   },
+
+  contentContainer: {
+    borderWidth: 2,
+    borderColor: "#CCC",
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
   searchcontainer: {
     backgroundColor: Colors.primaryColor,
     borderWidth: 0, //no effect

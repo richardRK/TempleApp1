@@ -43,12 +43,6 @@ const TopTabNavigator = createStackNavigator({
   Categories: {
     screen: TopNavigation,
   },
-  // CategoryTemples: {
-  //   screen: CategoryTempleScreen,
-  // },
-
-  // TempleDetail: TempleDetailScreen,
-  // MealDetail: MealDetailScreen,
 });
 
 const FavNavigator = createStackNavigator(
@@ -84,7 +78,6 @@ const PanditsNavigator = createStackNavigator(
 const MusicNavigator = createStackNavigator(
   {
     Music: MusicScreen,
-    // MealDetail: MealDetailScreen,
   },
   {
     // initialRouteName: 'Categories',
@@ -104,21 +97,6 @@ const BlogNavigator = createStackNavigator(
 );
 
 const tabScreenConfig = {
-  // Meals1: {
-  //   screen: MealsNavigator,
-  //   navigationOptions: {
-  //     tabBarIcon: (tabInfo) => {
-  //       return <Ionicons name="home" size={20} color={tabInfo.tintColor} />;
-  //     },
-  //     tabBarColor: Colors.primaryColor,
-  //     tabBarLabel:
-  //       Platform.OS === "android" ? (
-  //         <Text style={{ fontFamily: "open-sans-bold" }}>Home</Text>
-  //       ) : (
-  //         "Home"
-  //       ),
-  //   },
-  // },
 
   Meals2: {
     screen: TopTabNavigator,
@@ -260,9 +238,6 @@ const FiltersNavigator = createStackNavigator(
     Filters: FiltersScreen,
   },
   {
-    // navigationOptions: {
-    //   drawerLabel: 'Filters!!!!'
-    // },
     defaultNavigationOptions: defaultStackNavOptions,
   }
 );
@@ -290,13 +265,6 @@ const MainNavigator = createDrawerNavigator(
       },
     },
 
-    // MealsFavs2: {
-    //   screen: TopNavigation,
-    //   navigationOptions: {
-    //     drawerLabel: "Meals",
-    //   },
-    // },
-    // Filters: FiltersNavigator,
     Filters: FiltersNavigator,
   },
   {
