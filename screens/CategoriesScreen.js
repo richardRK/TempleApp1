@@ -60,13 +60,6 @@ const CategoriesScreen = (props) => {
         color={itemData.item.color}
         image={itemData.item.image}
         onSelect={() => {
-          // props.navigation.navigate({
-          //   routeName: "CategoryTemples",
-          //   params: {
-          //     categoryId: itemData.item.id,
-          //   },
-          // });
-
           props.navigation.navigate("CategoryTemples", itemData.item.id);
         }}
       />
@@ -78,10 +71,7 @@ const CategoriesScreen = (props) => {
       <SearchBar
         style={styles.searchbar}
         containerStyle={styles.searchcontainer}
-        // placeholderTextColor={"#g5g5g5"}
         placeholder="Type Here..."
-        // lightTheme
-        // round
         onChangeText={(text) => {
           filterCategory(text);
         }}

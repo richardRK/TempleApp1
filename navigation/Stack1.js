@@ -12,22 +12,8 @@ import CategoryTempleScreen from "../screens/CategoryTempleScreen";
 import TempleDetailScreen from "../screens/TempleDetailScreen";
 import MealDetailScreen from "../screens/MealDetailScreen";
 
-// const categoriesAll = {
-//   Categories: {
-//     screen: CategoriesScreen,
-//   },
-
-//   CategoryTemples: {
-//     screen: CategoryTempleScreen,
-//   },
-
-//   TempleDetail: TempleDetailScreen,
-//   MealDetail: MealDetailScreen,
-// };
-
 const Stack1 = (props) => {
-
-    const res =  props;
+  const res = props;
   return (
     <Stack.Navigator initialRouteName="Categories">
       <Stack.Screen name="Categories" component={CategoriesScreen} />

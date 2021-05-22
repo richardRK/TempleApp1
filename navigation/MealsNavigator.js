@@ -38,35 +38,17 @@ const defaultStackNavOptions = {
   // headerTitle: "A Screen",
 };
 
-const MealsNavigator = createStackNavigator(
-  {
-    Categories: {
-      screen: CategoriesScreen,
-    },
-
-    CategoryTemples: {
-      screen: CategoryTempleScreen,
-    },
-
-    TempleDetail: TempleDetailScreen,
-    MealDetail: MealDetailScreen,
-  },
-  {
-    // initialRouteName: 'Categories',
-    defaultNavigationOptions: defaultStackNavOptions,
-  }
-);
 
 const TopTabNavigator = createStackNavigator({
   Categories: {
     screen: TopNavigation,
   },
-  CategoryTemples: {
-    screen: CategoryTempleScreen,
-  },
+  // CategoryTemples: {
+  //   screen: CategoryTempleScreen,
+  // },
 
-  TempleDetail: TempleDetailScreen,
-  MealDetail: MealDetailScreen,
+  // TempleDetail: TempleDetailScreen,
+  // MealDetail: MealDetailScreen,
 });
 
 const FavNavigator = createStackNavigator(
