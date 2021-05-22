@@ -30,9 +30,9 @@ const TopNavigation = (props) => {
         <Tab.Navigator
           initialRouteName="Feed"
           tabBarOptions={{
-            activeTintColor: "#e91e63",
+            activeTintColor: "white",
             labelStyle: { fontSize: 12 },
-            style: { backgroundColor: "powderblue", marginVertical: 28 },
+            style: { backgroundColor: Colors.primaryColor},
           }}
         >
           <Tab.Screen
@@ -83,21 +83,21 @@ TopNavigation.navigationOptions = (navData) => {
             style={styles.icon1}
             name="language-outline"
             size={20}
-            color="white"
+            color="blue"
           />
 
           <Ionicons
             style={styles.icon1}
             name="location-outline"
             size={20}
-            color="white"
+            color="blue"
           />
 
           <Ionicons
             style={styles.icon1}
             name="ios-notifications"
             size={20}
-            color="white"
+            color="blue"
           />
         </TouchableOpacity>
       </View>

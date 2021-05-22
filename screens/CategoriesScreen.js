@@ -5,6 +5,7 @@ import {
   FlatList,
   View,
   Image,
+  ScrollView,
 } from "react-native";
 
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
@@ -68,23 +69,24 @@ const CategoriesScreen = (props) => {
 
   return (
     <View>
-      <SearchBar
-        style={styles.searchbar}
-        containerStyle={styles.searchcontainer}
-        placeholder="Type Here..."
-        onChangeText={(text) => {
-          filterCategory(text);
-        }}
-        value={categories}
-        autoCorrect={false}
-      />
-
-      <FlatList
-        keyExtractor={(item, index) => item.id}
-        data={categories}
-        renderItem={renderGridItem}
-        numColumns={2}
-      />
+      <ScrollView>
+        <SearchBar
+          style={styles.searchbar}
+          containerStyle={styles.searchcontainer}
+          placeholder="Type Here..."
+          onChangeText={(text) => {
+            filterCategory(text);
+          }}
+          value={categories}
+          autoCorrect={false}
+        />
+        <FlatList
+          keyExtractor={(item, index) => item.id}
+          data={categories}
+          renderItem={renderGridItem}
+          numColumns={2}
+        />
+      </ScrollView>
     </View>
   );
 };
