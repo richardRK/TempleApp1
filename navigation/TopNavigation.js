@@ -83,21 +83,21 @@ TopNavigation.navigationOptions = (navData) => {
             style={styles.icon1}
             name="language-outline"
             size={20}
-            color="blue"
+            color="white"
           />
 
           <Ionicons
             style={styles.icon1}
             name="location-outline"
             size={20}
-            color="blue"
+            color="white"
           />
 
           <Ionicons
             style={styles.icon1}
             name="ios-notifications"
             size={20}
-            color="blue"
+            color="white"
           />
         </TouchableOpacity>
       </View>

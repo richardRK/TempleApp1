@@ -19,7 +19,7 @@ const CategoryGridTile = (props) => {
   return (
     <Card style={styles.product}>
       <View style={styles.touchable}>
-        <TouchableCmp style={{ flex: 1 }} onPress={props.onSelect}>
+        <TouchableCmp  onPress={props.onSelect}>
           <View style={{ ...styles.container }}>
             <View style={styles.imageContainer}>
               <Image style={styles.image} source={props.image} />
@@ -43,11 +43,15 @@ const styles = StyleSheet.create({
     // paddingVertical: 20,
     // paddingVertical: 20,
     // paddingBottom: 50,
+    // marginLeft: "auto",
+    
   },
   touchable: {
     borderRadius: 10,
     // overflow: "hidden",
     // marginLeft:"auto"
+    flexDirection: "column",
+    
   },
 
   container: {
@@ -62,11 +66,15 @@ const styles = StyleSheet.create({
     paddingBottom: 50,
     justifyContent: "center",
     alignItems: "center",
+    // marginRight:60
+   
   },
   imageContainer: {
     flexDirection: "column",
     width: "100%",
     height: "100%",
+    // alignItems: "flex-start",
+    // justifyContent: "flex-start",
     // borderRadius: 3,
     // elevation: 1,
     // overflow: 'hidden',
@@ -78,14 +86,18 @@ const styles = StyleSheet.create({
 
     // flexDirection: "row",
     // justifyContent: "flex-start",
-    // flexWrap: "wrap",
+    flexWrap: "wrap",
+    // marginLeft: "auto",
+    // marginHorizontal : 60
   },
   image: {
     width: "100%",
     height: "100%",
-    alignItems: "center",
-    justifyContent: "space-between",
-    flexWrap: "wrap",
+    // alignItems: "flex-start",
+    // // justifyContent: "space-around",
+    // justifyContent: "flex-start",
+    // alignItems: "center",
+   
   },
 
   title: {

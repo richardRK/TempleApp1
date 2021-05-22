@@ -18,6 +18,12 @@ export const CATEGORIES = [
     "#f5a442",
     require("../assets/imgs/language.jpg")
   ),
+  new Category(
+    "c4",
+    "Language",
+    "#f5a442",
+    require("../assets/imgs/language.jpg")
+  ),
 ];
 
 export const MEALS = [
