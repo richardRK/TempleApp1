@@ -3,6 +3,7 @@ import Meal from "../models/meal";
 import Temple from "../models/temple";
 
 import Images from "../constants/Images";
+import Carousel from "../models/Carousel";
 
 export const CATEGORIES = [
   new Category(
@@ -27,27 +28,24 @@ export const CATEGORIES = [
 ];
 
 export const CAROUSEL_DATA = [
-  {
-    title: "Anise Aroma Art Bazar",
-    url: "https://i.ibb.co/hYjK44F/anise-aroma-art-bazaar-277253.jpg",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    id: 1,
-  },
-  {
-    title: "Food inside a Bowl",
-    url: "https://i.ibb.co/JtS24qP/food-inside-bowl-1854037.jpg",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    id: 2,
-  },
-  {
-    title: "Vegatable Salad",
-    url: "https://i.ibb.co/JxykVBt/flat-lay-photography-of-vegetable-salad-on-plate-1640777.jpg",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    id: 3,
-  },
+  new Carousel(
+    1,
+    "Anise Aroma Art Bazar",
+    require("../assets/imgs/header.jpg"),
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+  ),
+  new Carousel(
+    2,
+    "Anise Aroma Art Bazar",
+    require("../assets/imgs/header.jpg"),
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+  ),
+  new Carousel(
+    3,
+    "Anise Aroma Art Bazar",
+    require("../assets/imgs/header.jpg"),
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+  ),
 ];
 
 export const MEALS = [
