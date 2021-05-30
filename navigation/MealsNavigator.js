@@ -111,6 +111,7 @@ const tabScreenConfig = {
         return <Ionicons name="home" size={20} color={tabInfo.tintColor} />;
       },
       tabBarColor: Colors.primaryColor,
+      tabBarVisible:false,
       tabBarLabel:
         Platform.OS === "android" ? (
           <Text style={{ fontFamily: "open-sans-bold" }}>Home</Text>
@@ -122,7 +123,7 @@ const tabScreenConfig = {
 
   Temples: {
     screen: TemplesNavigator,
-    path: "Temples",
+    // path: "Temples",
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
         return (
@@ -141,7 +142,7 @@ const tabScreenConfig = {
 
   Pandits: {
     screen: PanditsNavigator,
-    path: "Pandits",
+    // path: "Pandits",
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
         return (
@@ -164,7 +165,7 @@ const tabScreenConfig = {
 
   Music: {
     screen: MusicNavigator,
-    path: "Music",
+    // path: "Music",
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
         return (
@@ -187,7 +188,7 @@ const tabScreenConfig = {
 
   Blog: {
     screen: BlogNavigator,
-    path: "Blog",
+    // path: "Blog",
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
         return (
@@ -210,12 +211,13 @@ const tabScreenConfig = {
 
   Favorites: {
     screen: FavNavigator,
-    path: "Favorites",
+    // path: "Favorites",
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
         return <Ionicons name="ios-star" size={20} color={tabInfo.tintColor} />;
       },
       tabBarColor: Colors.accentColor,
+      tabBarVisible:true,
       tabBarLabel:
         Platform.OS === "android" ? (
           <Text style={{ fontFamily: "open-sans-bold" }}>Favorites</Text>
@@ -234,6 +236,7 @@ const MealsFavTabNavigator =
         barStyle: {
           backgroundColor: Colors.primaryColor,
         },
+        // initialRouteName:'Temples'
       })
     : createBottomTabNavigator(tabScreenConfig, {
         tabBarOptions: {
@@ -269,30 +272,38 @@ const MainNavigator = createDrawerNavigator(
       },
     },
 
+    //TopTabNavigator
+
+    // t5: {
+    //   screen: TopTabNavigator,
+    //   // DefaultScreen: {
+    //   //   screen: CategoriesScreen,
+    //   // },
+    //   // initialRouteName:'Music',
+
+    //   navigationOptions: {
+    //     drawerLabel: "Meals",
+    //     // initialRouteName:'Music'
+    //   },
+    // },
+
+
     MealsFavs: {
-      screen: TopTabNavigator,
+      screen: MealsFavTabNavigator,
       // DefaultScreen: {
       //   screen: CategoriesScreen,
       // },
+      // initialRouteName:'Music',
 
       navigationOptions: {
         drawerLabel: "Meals",
+        // initialRouteName:'Music'
       },
     },
 
     Filters: FiltersNavigator,
   },
-  {
-    // initialRouteName: "Splash",
-
-    BottomNav1: {
-      screen: BottomNav1,
-
-      navigationOptions: {
-        drawerLabel: "Meals",
-      },
-    },
-  },
+  
   {
     contentOptions: {
       activeTintColor: Colors.accentColor,
