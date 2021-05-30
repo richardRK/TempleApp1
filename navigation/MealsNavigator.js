@@ -23,6 +23,7 @@ import CategoryTempleScreen from "../screens/CategoryTempleScreen";
 import TempleDetailScreen from "../screens/TempleDetailScreen";
 
 import TopNavigation from "../navigation/TopNavigation";
+import BottomNav from "./BottomNav";
 
 const defaultStackNavOptions = {
   headerStyle: {
@@ -38,10 +39,15 @@ const defaultStackNavOptions = {
   // headerTitle: "A Screen",
 };
 
-
 const TopTabNavigator = createStackNavigator({
   Categories: {
     screen: TopNavigation,
+  },
+});
+
+const BottomNav1 = createStackNavigator({
+  Categories: {
+    screen: BottomNav,
   },
 });
 
@@ -97,9 +103,9 @@ const BlogNavigator = createStackNavigator(
 );
 
 const tabScreenConfig = {
-
   Meals2: {
     screen: TopTabNavigator,
+    path: "",
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
         return <Ionicons name="home" size={20} color={tabInfo.tintColor} />;
@@ -116,6 +122,7 @@ const tabScreenConfig = {
 
   Temples: {
     screen: TemplesNavigator,
+    path: "Temples",
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
         return (
@@ -134,6 +141,7 @@ const tabScreenConfig = {
 
   Pandits: {
     screen: PanditsNavigator,
+    path: "Pandits",
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
         return (
@@ -156,6 +164,7 @@ const tabScreenConfig = {
 
   Music: {
     screen: MusicNavigator,
+    path: "Music",
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
         return (
@@ -178,6 +187,7 @@ const tabScreenConfig = {
 
   Blog: {
     screen: BlogNavigator,
+    path: "Blog",
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
         return (
@@ -200,6 +210,7 @@ const tabScreenConfig = {
 
   Favorites: {
     screen: FavNavigator,
+    path: "Favorites",
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
         return <Ionicons name="ios-star" size={20} color={tabInfo.tintColor} />;
@@ -259,13 +270,28 @@ const MainNavigator = createDrawerNavigator(
     },
 
     MealsFavs: {
-      screen: MealsFavTabNavigator,
+      screen: TopTabNavigator,
+      // DefaultScreen: {
+      //   screen: CategoriesScreen,
+      // },
+
       navigationOptions: {
         drawerLabel: "Meals",
       },
     },
 
     Filters: FiltersNavigator,
+  },
+  {
+    // initialRouteName: "Splash",
+
+    BottomNav1: {
+      screen: BottomNav1,
+
+      navigationOptions: {
+        drawerLabel: "Meals",
+      },
+    },
   },
   {
     contentOptions: {

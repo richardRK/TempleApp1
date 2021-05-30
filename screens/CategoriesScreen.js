@@ -67,6 +67,8 @@ const CategoriesScreen = (props) => {
           renderItem={renderGridItem}
           numColumns={2}
         />
+
+     
       </ScrollView>
     </View>
   );
