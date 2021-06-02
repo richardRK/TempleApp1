@@ -15,7 +15,12 @@ import MealDetailScreen from "../screens/MealDetailScreen";
 const Stack1 = (props) => {
   const res = props;
   return (
-    <Stack.Navigator initialRouteName="Categories">
+    <Stack.Navigator
+      initialRouteName="Categories"
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <Stack.Screen name="Categories" component={CategoriesScreen} />
       <Stack.Screen name="CategoryTemples" component={CategoryTempleScreen} />
       <Stack.Screen name="TempleDetail" component={TempleDetailScreen} />

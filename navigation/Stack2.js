@@ -6,7 +6,12 @@ import { createStackNavigator } from "@react-navigation/stack";
 const Stack = createStackNavigator();
 const Stack2 = (props) => {
   return (
-    <Stack.Navigator initialRouteName="GymIndex">
+    <Stack.Navigator
+      initialRouteName="GymIndex"
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <Stack.Screen name="GymIndex" component={FavoritesScreen} />
     </Stack.Navigator>
   );

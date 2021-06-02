@@ -51,6 +51,7 @@ const CategoriesScreen = (props) => {
     <View>
       <ScrollView>
         <SearchBar
+          // autosize={false}
           style={styles.searchbar}
           containerStyle={styles.searchcontainer}
           placeholder="Type Here..."
@@ -59,6 +60,7 @@ const CategoriesScreen = (props) => {
           }}
           value={categories}
           autoCorrect={false}
+          // icon={()=><MaterialCommunityIcon name="barcode-scan" size={30}/>}
         />
         <Carousel data={CAROUSEL_DATA} />
         <FlatList
@@ -67,8 +69,6 @@ const CategoriesScreen = (props) => {
           renderItem={renderGridItem}
           numColumns={2}
         />
-
-     
       </ScrollView>
     </View>
   );
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   },
 
   contentContainer: {
-    borderWidth: 2,
+    // borderWidth: 2,
     borderColor: "#CCC",
     flex: 1,
     justifyContent: "center",
@@ -102,7 +102,9 @@ const styles = StyleSheet.create({
     borderTopColor: "transparent",
   },
   searchbar: {
-    width: "70%",
+    // flex: 1,
+    // width: "85%",
+    // height:"5%",
     // backgroundColor: "", //no effect
     borderWidth: 0, //no effect
     shadowColor: Colors.primaryColor, //no effect

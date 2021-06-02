@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { CATEGORIES } from "../data/dummy-data";
+
 import CategoriesScreen from "../screens/CategoriesScreen";
 import MusicScreen from "../screens/MusicScreen";
 
@@ -9,6 +11,8 @@ import {
   View,
   Image,
 } from "react-native";
+
+import { SearchBar } from "react-native-elements";
 
 import { Ionicons } from "@expo/vector-icons";
 
@@ -24,6 +28,18 @@ import Drawer2 from "./Drawer2";
 const Tab = createMaterialTopTabNavigator();
 
 const TopNavigation = (props) => {
+  const [categories, setFilterCategory] = useState(CATEGORIES);
+
+  const filterCategory = (text) => {
+    const newData = CATEGORIES.filter((item) => {
+      const itemData = `${item.title.toUpperCase()}`;
+      const textData = text.toUpperCase();
+      return itemData.indexOf(textData) > -1;
+    });
+
+    setFilterCategory(newData);
+  };
+
   return (
     <View style={{ flex: 1 }}>
       <NavigationContainer>
@@ -32,7 +48,7 @@ const TopNavigation = (props) => {
           tabBarOptions={{
             activeTintColor: "white",
             labelStyle: { fontSize: 12 },
-            style: { backgroundColor: Colors.primaryColor},
+            style: { backgroundColor: Colors.primaryColor },
           }}
         >
           <Tab.Screen
@@ -52,6 +68,18 @@ const TopNavigation = (props) => {
 };
 
 TopNavigation.navigationOptions = (navData) => {
+  const filterCategory = (text) => {
+    const newData = CATEGORIES.filter((item) => {
+      const itemData = `${item.title.toUpperCase()}`;
+      const textData = text.toUpperCase();
+      return itemData.indexOf(textData) > -1;
+    });
+
+    return newData;
+
+    //setFilterCategory(newData);
+  };
+
   return {
     headerTitle: "",
     headerStyle: {
@@ -79,6 +107,14 @@ TopNavigation.navigationOptions = (navData) => {
           style={styles.icons}
           // onPress={() => navigation.navigate({ routeName: "Notification" })}
         >
+          {/* <Ionicons
+            style={styles.icon1}
+            name="search-outline"
+            size={20}
+            color="white"
+            onPress={() => filterCategory}
+          /> */}
+
           <Ionicons
             style={styles.icon1}
             name="language-outline"
@@ -99,6 +135,17 @@ TopNavigation.navigationOptions = (navData) => {
             size={20}
             color="white"
           />
+
+          {/* <SearchBar
+            style={styles.searchbar}
+            containerStyle={styles.searchcontainer}
+            placeholder="Type Here..."
+            onChangeText={(text) => {
+              TopNavigation.filterCategory(text);
+            }}
+            value={TopNavigation.categories}
+            autoCorrect={false}
+          /> */}
         </TouchableOpacity>
       </View>
     ),
@@ -110,7 +157,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    paddingTop: 5,
+    // paddingTop: 3,
     // marginTop: 20,
   },
   searchcontainer: {

@@ -45,11 +45,6 @@ const TopTabNavigator = createStackNavigator({
   },
 });
 
-const BottomNav1 = createStackNavigator({
-  Categories: {
-    screen: BottomNav,
-  },
-});
 
 const FavNavigator = createStackNavigator(
   {
@@ -111,7 +106,7 @@ const tabScreenConfig = {
         return <Ionicons name="home" size={20} color={tabInfo.tintColor} />;
       },
       tabBarColor: Colors.primaryColor,
-      tabBarVisible:false,
+      // tabBarVisible:false,
       tabBarLabel:
         Platform.OS === "android" ? (
           <Text style={{ fontFamily: "open-sans-bold" }}>Home</Text>
@@ -272,21 +267,7 @@ const MainNavigator = createDrawerNavigator(
       },
     },
 
-    //TopTabNavigator
-
-    // t5: {
-    //   screen: TopTabNavigator,
-    //   // DefaultScreen: {
-    //   //   screen: CategoriesScreen,
-    //   // },
-    //   // initialRouteName:'Music',
-
-    //   navigationOptions: {
-    //     drawerLabel: "Meals",
-    //     // initialRouteName:'Music'
-    //   },
-    // },
-
+    
 
     MealsFavs: {
       screen: MealsFavTabNavigator,

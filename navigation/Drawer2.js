@@ -8,7 +8,7 @@ const Drawer = createDrawerNavigator();
 const Drawer2 = (props) => {
   return (
     <Drawer.Navigator>
-      <Drawer.Screen name="Gym" component={Stack2} />
+      <Drawer.Screen name="Updates" component={Stack2} />
     </Drawer.Navigator>
   );
 };
